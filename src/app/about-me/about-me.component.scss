@@ -1,0 +1,87 @@
+@import '../../styles.scss';
+
+main {
+    flex-direction: row;
+    margin-bottom: 150px;
+}
+
+section {
+    position: relative;
+    width: 90%;
+    display: flex;
+    right: 0;
+    max-width: $content-width;
+    z-index: 4;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 4;
+
+    h1 {
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    p {
+        padding-bottom: 25px;
+        padding-top: 20px;
+    }
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+
+    img {
+        padding-right: 20px;
+    }
+}
+
+.dev-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 65%;
+    padding: 30px;
+    z-index: 4;
+
+    img {
+        position: absolute;
+        right: 253px;
+        height: 400px;
+        width: 400px;
+        border: 3px solid $green;
+        border-radius: 50%;
+    }
+}
+
+.vector {
+    position: absolute;
+    width: 1455px;
+    right: -1200px;
+    height: 2px;
+    background-color: $green;
+}
+
+.background-shade {
+    content: url('../../assets/img/about-me-shadow.png');
+    position: absolute;
+    right: -20%;
+    top: 85%;
+    width: 40%;
+    height: auto;
+    z-index: 3;
+    overflow-x: hidden;
+}

@@ -1,0 +1,7 @@
+@import '../../styles.scss';
+
+section {
+    display: flex;
+    width: 90%;
+    max-width: $content-width;
+}
