@@ -5,3 +5,63 @@ section {
     width: 90%;
     max-width: $content-width;
 }
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 50%;
+    margin-right: 50px;
+
+    img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+.skills-text {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    text-align: end;
+}
+
+.looking-for {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+
+    span {
+        color: $purple;
+    }
+}
+
+.title-span {
+    display: flex;
+    justify-content: end;
+}
+
+.vector-span {
+    position: relative;
+    width: 0px;
+    display: flex;
+}
+
+.vector {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    bottom: 50%;
+    left: 40px;
+    height: 3px;
+    background-color: $purple;
+}

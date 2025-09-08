@@ -18,8 +18,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 35%;
-    padding: 2rem;
+    width: 40%;
+    padding-right: 2rem;
     gap: 1.5rem;
     z-index: 4;
 
@@ -53,13 +53,13 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 65%;
-    padding: 30px;
+    width: 60%;
+    padding-left: 30px;
     z-index: 4;
 
     img {
         position: absolute;
-        right: 253px;
+        right: 153px;
         height: 400px;
         width: 400px;
         border: 3px solid $green;
@@ -69,7 +69,7 @@ section {
 
 .vector {
     position: absolute;
-    width: 1455px;
+    width: 1355px;
     right: -1200px;
     height: 2px;
     background-color: $green;
