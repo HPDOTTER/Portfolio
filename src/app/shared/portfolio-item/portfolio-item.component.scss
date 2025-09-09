@@ -1,0 +1,135 @@
+@import '../../../styles.scss';
+
+section {
+    flex-direction: column;
+    width: 90%;
+    max-width: $content-width;
+    align-items: center;
+}
+
+h3 {
+    font-size: 32px;
+    color: $purple;
+    font-weight: 700;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+  width: 100%;
+  
+  // Gespiegelte Version (ungerade Nummern)
+  &.reversed {
+    flex-direction: row-reverse;
+    
+    .content-section {
+      text-align: right;
+    }
+    
+    .project-links {
+      justify-content: flex-end;
+    }
+  }
+  
+  // Normale Version (gerade Nummern)
+  &:not(.reversed) {
+    .content-section {
+      text-align: left;
+    }
+    
+    .project-links {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.image-section {
+  position: relative;
+  flex: 1;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .project-image {
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  
+  .project-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba($white, 0.8);
+  }
+  
+  .technologies {
+    font-size: 23px;
+    font-weight: 400;
+
+    .tech-item {
+      color: $green;
+    }
+
+    span {
+        color: $green;
+    }
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 15px;
+    
+    .btn-link {
+      padding: 12px 24px;
+      border: 1px solid $green;
+      border-radius: 10px;
+      color: $white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.125s ease;
+      
+      &:hover {
+        background: $green;
+        color: $white;
+      }
+      
+      &.primary {
+        background: $purple;
+        border-color: $purple;
+        color: $white;
+        
+        &:hover {
+          background: $green;
+          border-color: $green;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column;
+    gap: 30px;
+    
+    .content-section {
+      text-align: center;
+      
+      .project-links {
+        justify-content: center;
+      }
+    }
+  }
+}

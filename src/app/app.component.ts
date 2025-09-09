@@ -5,6 +5,7 @@ import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { RecommendationComponent } from './recommendation/recommendation.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -18,6 +19,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
+    RecommendationComponent,
     ContactFormComponent,
     FooterComponent,
   ],
