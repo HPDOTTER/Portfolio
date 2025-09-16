@@ -1,0 +1,113 @@
+@import "../../styles.scss";
+
+main {
+    margin: 150px 0px;
+    position: relative;
+}
+
+section {
+    flex-direction: column;
+    gap: 32px;
+}
+
+.recommendation {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 65%;
+    margin: 0 5%;
+    padding: 5% 5%;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid $green;
+    border-radius: 32px;
+    gap: 44px;
+}
+
+.recommendation-container {
+    display: flex;
+    width: 100%;
+}
+
+.double-quotes {
+    position: absolute;
+    top: -30px;
+    left: -60px;
+    width: 90px;
+    height: auto;
+    content: url("../../assets/img/double-quotes.png");
+}
+
+.person-container {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+    p {
+        white-space: nowrap;
+        width: auto;
+        display: inline-block;
+    }
+}
+
+.purple-line {
+    display: flex;
+    width: 90%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $purple;
+}
+
+.green-shade {
+    content: url("../../assets/img/green-shadow-portfolio.png");
+    position: absolute;
+    width: 700px;
+    height: auto;
+    right: -20%;
+    bottom: 20%;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.picture-container {
+    position: relative;
+    display: flex;
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 4px solid $purple;
+    }
+}
+
+.purple-vector-container {
+    position: relative;
+    width: 0px;
+    height: 3px;
+    display: flex;
+}
+
+.purple-vector {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    bottom: 50%;
+    left: 0px;
+    height: 4px;
+    background-color: $purple;
+}
+
+.rotate180deg {
+    transform: rotate(180deg);
+}
+
+.recommendation-selection {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}

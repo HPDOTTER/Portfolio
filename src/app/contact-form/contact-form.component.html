@@ -1,1 +1,53 @@
-<p>contact-form works!</p>
+<main>
+    <section>
+        <div class="container">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <label for="name">Name</label>
+                <input
+                    [(ngModel)]="contactData.name"
+                    #name="ngModel"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                />
+
+                <label for="email">Email</label>
+                <input
+                    [(ngModel)]="contactData.email"
+                    #email="ngModel"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your email"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    required
+                />
+
+                <label for="message">Message</label>
+                <textarea
+                    [(ngModel)]="contactData.message"
+                    #message="ngModel"
+                    id="message"
+                    name="message"
+                    minlength="3"
+                    placeholder="Write something.."
+                    style="height: 200px"
+                    required
+                ></textarea>
+                <div *ngIf="!message.valid && message.touched">
+                    <p style="color: red; margin-bottom: 10px;">Please enter a message (minimum 3 characters)</p>
+                </div>
+                <div *ngIf="!email.valid && email.touched">
+                    <p style="color: red; margin-bottom: 10px;">Please enter a valid email address</p>
+                </div>
+                <div *ngIf="!name.valid && name.touched">
+                    <p style="color: red; margin-bottom: 10px;">Please enter a name</p>
+                </div>
+
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </section>
+</main>

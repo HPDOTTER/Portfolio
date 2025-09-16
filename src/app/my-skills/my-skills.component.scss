@@ -5,11 +5,7 @@ main {
     position: relative;
 }
 
-section {
-    display: flex;
-    width: 90%;
-    max-width: $content-width;
-}
+
 
 .skills-icons {
     display: flex;
@@ -84,5 +80,4 @@ h2 {
     width: 500px;
     height: auto;
     z-index: -10;
-    overflow-x: hidden;
 }

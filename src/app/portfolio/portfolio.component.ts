@@ -56,7 +56,7 @@ export class PortfolioComponent {
       title: 'Portfolio Website',
       description: 'Meine persönliche Portfolio-Website, die Sie gerade besuchen. Responsive Design, moderne Animationen und optimale Performance.',
       image: '',
-      technologies: ['Angular', 'SCSS', 'TypeScript', 'Animations'],
+      technologies: ['Angular', 'SCSS', 'TypeScript'],
       githubLink: 'https://github.com/username/portfolio',
       liveLink: 'https://portfolio.example.com'
     }

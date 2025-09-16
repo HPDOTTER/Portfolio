@@ -1,0 +1,32 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "typescript.preferences.indentSize": 4,
+    "html.format.indentInnerHtml": true,
+    "html.format.indentSize": 4,
+    "css.format.indentSize": 4,
+    "scss.format.indentSize": 4,
+    "json.format.enable": true,
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[html]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[scss]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[css]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    }
+}

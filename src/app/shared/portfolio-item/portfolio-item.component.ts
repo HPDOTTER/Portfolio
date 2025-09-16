@@ -15,6 +15,6 @@ export class PortfolioItemComponent {
     @Input() technologies: string[] = [];
     @Input() githubLink: string = '';
     @Input() liveLink: string = '';
-    @Input() isReversed: boolean = false; // Für die Spiegelung
-    @Input() index: number = 0; // Für Styling-Unterschiede
+    @Input() isReversed: boolean = false;
+    @Input() index: number = 0;
 }
