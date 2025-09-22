@@ -4,6 +4,10 @@ section {
     gap: 50px;
 }
 
+main {
+    flex-direction: column;
+}
+
 input[type="text"],
 input[type="email"] {
     position: relative;
@@ -190,4 +194,17 @@ form {
     height: 25px;
     right: 10px;
     top: 14px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin: 50px 0px;
+
+    img {
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+    }
 }
