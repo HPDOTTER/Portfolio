@@ -1,37 +1,193 @@
 @import "../../styles.scss";
 
-input[type="text"],
-input[type="email"],
-textarea {
-    color: black;
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+section {
+    gap: 50px;
 }
 
-/* Style the submit button with a specific background color etc */
+input[type="text"],
+input[type="email"] {
+    position: relative;
+    color: $white;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $purple;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: transparent;
+
+    &::placeholder {
+        color: rgba($white, 0.8);
+    }
+
+    &:hover {
+        border: 1px solid $green;
+    }
+
+    &:focus {
+        border: 1px solid $green;
+        outline: none;
+    }
+
+    /* Override autofill styles */
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+        -webkit-text-fill-color: $white !important;
+        background-color: transparent !important;
+        transition: background-color 500000s ease-in-out 0s;
+    }
+
+    /* Firefox autofill */
+    &:-moz-autofill {
+        background-color: transparent !important;
+        color: $white !important;
+    }
+}
+
+textarea {
+    position: relative;
+    color: $white;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $purple;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: transparent;
+
+    &::placeholder {
+        color: rgba($white, 0.8);
+    }
+
+    &:hover {
+        border: 1px solid $green;
+    }
+
+    &:focus {
+        border: 1px solid $green;
+        outline: none;
+    }
+}
+
+input[type="checkbox"] {
+    border: 2px solid $green;
+    border-radius: 2px;
+    width: 20px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    &:checked {
+        background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(112, 230, 28)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M4 8l3 3 5-5' stroke='rgb(112, 230, 28)' stroke-width='2' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:hover {
+        border: 2px solid $purple;
+    }
+}
+
+.checkbox-label {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+
+    &::-webkit-resizer {
+        background-image: url("../../assets/icons/resize-handle.png");
+        background-repeat: no-repeat;
+        background-position: bottom 5px right 5px;
+        cursor: se-resize;
+        border: none;
+        opacity: 0.8;
+    }
+}
+
 input[type="submit"] {
-    background-color: #04aa6d;
+    background-color: $green;
+    width: 150px;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    &:hover {
+        background-color: $purple;
+    }
+
+    &:disabled {
+        background-color: $disabled;
+        cursor: not-allowed;
+    }
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type="submit"]:hover {
-    background-color: #45a049;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        width: 100%;
+        position: relative;
+
+        p {
+            font-size: 12px;
+        }
+    }
 }
 
-/* Add a background color and some padding around the form */
-.container {
+.form-container {
+    width: 100%;
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
+}
+
+.contact-instruction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-self: stretch;
+    gap: 24px;
+}
+
+.link {
+    color: $purple;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: underline $purple;
+    }
+}
+
+.invalid {
+    border: 1px solid red !important;
+}
+
+.valid {
+    border: 1px solid $green !important;
+}
+
+.icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 14px;
 }

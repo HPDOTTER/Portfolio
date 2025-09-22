@@ -18,6 +18,7 @@ export class ContactFormComponent {
         name: '',
         email: '',
         message: '',
+        privacy: false,
     };
 
     mailTest = true;
@@ -47,6 +48,7 @@ export class ContactFormComponent {
                     complete: () => console.info('send post complete'),
                 });
         } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+            alert('Test-Nachricht erfolgreich versendet!');
             ngForm.resetForm();
         }
     }

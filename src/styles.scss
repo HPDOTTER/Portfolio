@@ -1,7 +1,9 @@
 $background: #141D2F;
 $purple: #9747FF;
-$green: #70E61C;
+$green: #70e61c;
 $white: #FFFFFF;
+$disabled: #B6B6B6;
+
 
 
 
@@ -38,6 +40,7 @@ section {
 
 .green-button {
     transition: transform 0.125s ease-in-out;
+    width: fit-content;
 
     &:hover {
         transform: scale(1.15);

@@ -1,52 +1,153 @@
-<main>
+<main class="center">
     <section>
-        <div class="container">
+        <div class="contact-instruction">
+            <h3>Got a problem to solve?</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+                laborum labore eum, accusamus porro quidem quo rerum vel
+                exercitationem omnis tempore? Ex corporis qui facilis laudantium
+                vitae voluptate dicta beatae.
+            </p>
+            <p>Need a Frontend Developer? Contact me!</p>
+        </div>
+        <div class="form-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <label for="name">Name</label>
-                <input
-                    [(ngModel)]="contactData.name"
-                    #name="ngModel"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                />
-
-                <label for="email">Email</label>
-                <input
-                    [(ngModel)]="contactData.email"
-                    #email="ngModel"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your email"
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                    required
-                />
-
-                <label for="message">Message</label>
-                <textarea
-                    [(ngModel)]="contactData.message"
-                    #message="ngModel"
-                    id="message"
-                    name="message"
-                    minlength="3"
-                    placeholder="Write something.."
-                    style="height: 200px"
-                    required
-                ></textarea>
-                <div *ngIf="!message.valid && message.touched">
-                    <p style="color: red; margin-bottom: 10px;">Please enter a message (minimum 3 characters)</p>
-                </div>
-                <div *ngIf="!email.valid && email.touched">
-                    <p style="color: red; margin-bottom: 10px;">Please enter a valid email address</p>
+                <label for="name"></label>
+                <div>
+                    <input
+                        [(ngModel)]="contactData.name"
+                        [ngClass]="{ invalid: !name.valid && name.touched, valid: name.valid && name.touched }"
+                        #name="ngModel"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    />
+                    <span
+                        class="icon"
+                        *ngIf="name.invalid && name.touched"
+                        style="
+                            content: url(../../assets/icons/red-exclamation-mark.png);
+                        "
+                    ></span>
+                    <span
+                        class="icon"
+                        *ngIf="name.valid && name.touched"
+                        style="
+                            content: url(../../assets/icons/green-checkmark.png);
+                        "
+                    ></span>
                 </div>
                 <div *ngIf="!name.valid && name.touched">
-                    <p style="color: red; margin-bottom: 10px;">Please enter a name</p>
+                    <p style="color: red; margin-bottom: 10px">
+                        Please enter a name
+                    </p>
                 </div>
+                <label for="email"></label>
+                <div>
+                    <input
+                        [(ngModel)]="contactData.email"
+                        [ngClass]="{'invalid': (!email.valid && email.touched) || (email.errors?.['pattern'] && email.touched), 'valid': email.valid && email.touched}"
+                        #email="ngModel"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        required
+                    />
+                    <span
+                        class="icon"
+                        *ngIf="email.invalid && email.touched"
+                        style="
+                            content: url(../../assets/icons/red-exclamation-mark.png);
+                        "
+                    ></span>
+                    <span
+                        class="icon"
+                        *ngIf="email.valid && email.touched"
+                        style="
+                            content: url(../../assets/icons/green-checkmark.png);
+                        "
+                    ></span>
+                </div>
+                <div *ngIf="!email.valid && email.touched">
+                    <p
+                        *ngIf="email.errors?.['required']"
+                        style="color: red; margin-bottom: 10px"
+                    >
+                        Please enter an email address
+                    </p>
+                    <p
+                        *ngIf="email.errors?.['pattern']"
+                        style="color: red; margin-bottom: 10px"
+                    >
+                        Please enter a valid email address format
+                    </p>
+                </div>
+                <label for="message"></label>
+                <div>
+                    <textarea
+                        [(ngModel)]="contactData.message"
+                        [ngClass]="{
+                            invalid: !message.valid && message.touched,
+                            valid: message.valid && message.touched
+                        }"
+                        #message="ngModel"
+                        id="message"
+                        name="message"
+                        minlength="3"
+                        placeholder="Your message"
+                        style="height: 200px"
+                        required
+                    ></textarea>
+                    <span
+                        class="icon"
+                        *ngIf="message.invalid && message.touched"
+                        style="
+                            content: url(../../assets/icons/red-exclamation-mark.png);
+                        "
+                    ></span>
+                    <span
+                        class="icon"
+                        *ngIf="message.valid && message.touched"
+                        style="
+                            content: url(../../assets/icons/green-checkmark.png),
+                        "
+                    ></span>
+                </div>
+                <div *ngIf="!message.valid && message.touched">
+                    <p style="color: red; margin-bottom: 10px">
+                        Please enter a message (minimum 3 characters)
+                    </p>
+                </div>
+                <label class="checkbox-label" for="checkbox">
+                    <input
+                        #checkbox="ngModel"
+                        [(ngModel)]="contactData.privacy"
+                        type="checkbox"
+                        id="privacy"
+                        name="privacy"
+                        required
+                    />
+                    <p>
+                        I have read the
+                        <a class="link" href="#">privacy policy</a> and agree to
+                        the processing of my personal data as outlined.
+                    </p>
+                </label>
 
-                <input type="submit" value="Submit" />
+                <input
+                    type="submit"
+                    value="Send Message"
+                    [disabled]="
+                        !checkbox.valid ||
+                        !message.valid ||
+                        !email.valid ||
+                        !name.valid
+                    "
+                />
             </form>
         </div>
     </section>
