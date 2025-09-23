@@ -4,14 +4,14 @@
         <section class="introduction">
             <div class="headerbox">
                 <div class="rotate-header-item">
-                    <h2>I am</h2>
+                    <h2>{{ "hero.greeting" | translate }}</h2>
                 </div>
                 <div class="header-item">
                     <h1>Johannes Nordmann</h1>
-                    <h3>FRONTEND DEVELOPER</h3>
+                    <h3>{{ "hero.title" | translate }}</h3>
                 </div>
                 <div class="green-button">
-                    <a href="">Let's talk!</a>
+                    <a href="">{{ "hero.cta" | translate }}</a>
                 </div>
             </div>
         </section>
@@ -30,7 +30,8 @@
         </section>
         <section class="scroll-down">
             <a href="#about-me"
-                >Scroll down<img src="../../assets/icons/arrow-down-line.png"
+                >{{ "hero.scroll" | translate
+                }}<img src="../../assets/icons/arrow-down-line.png"
             /></a>
         </section>
     </div>

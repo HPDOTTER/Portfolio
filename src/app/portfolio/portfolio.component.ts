@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioItemComponent } from '../shared/portfolio-item/portfolio-item.component';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 interface Project {
     title: string;
@@ -14,7 +15,7 @@ interface Project {
 @Component({
     selector: 'app-portfolio',
     standalone: true,
-    imports: [CommonModule, PortfolioItemComponent],
+    imports: [CommonModule, PortfolioItemComponent, TranslatePipe],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss',
 })

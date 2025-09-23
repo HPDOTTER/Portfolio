@@ -3,33 +3,36 @@
     <section>
         <div class="about-me">
             <span>
-                <h1>About me</h1>
+                <h1>{{ "about.title" | translate }}</h1>
             </span>
             <span>
                 <p>
-                    I'm a passionate web developer with a knack for creating dynamic and
-                    responsive web applications. My journey in tech started with a curiosity
-                    for how things work, and it has evolved into a full-fledged career where
-                    I get to solve real-world problems through code.
+                    {{ "about.description" | translate }}
                 </p>
             </span>
             <div class="info-container">
                 <div class="info">
-                    <span><img src="../../assets/icons/location.png" alt=""></span>
-                    <span>Where are you located? Are you open to different ways of working, such as working remotely or even relocating?</span>
+                    <span
+                        ><img src="../../assets/icons/location.png" alt=""
+                    /></span>
+                    <span>{{ "about.location" | translate }}</span>
                 </div>
                 <div class="info">
-                    <span><img src="../../assets/icons/bulb.png" alt=""></span>
-                    <span>What inspires your work? Are there any particular technologies or methodologies that you are passionate about?</span>
+                    <span
+                        ><img src="../../assets/icons/bulb.png" alt=""
+                    /></span>
+                    <span>{{ "about.inspiration" | translate }}</span>
                 </div>
                 <div class="info">
-                    <span><img src="../../assets/icons/puzzle.svg" alt=""></span>
-                    <span>A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration.</span>
+                    <span
+                        ><img src="../../assets/icons/puzzle.svg" alt=""
+                    /></span>
+                    <span>{{ "about.approach" | translate }}</span>
                 </div>
             </div>
         </div>
         <div class="dev-picture">
-            <span class="image-span"><img src="" alt=""></span>
+            <span class="image-span"><img src="" alt="" /></span>
             <span class="vector-span"><span class="vector"></span></span>
         </div>
     </section>

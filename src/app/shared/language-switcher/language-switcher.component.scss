@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.language-switcher {
+    display: flex;
+    width: 100px;
+    gap: 14px;
+}
+
+.language-switcher button {
+    background: none;
+    border: 1px solid $green;
+    border-radius: 10px;
+    padding: 5px 8px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &.active {
+        background-color: $green;
+        border: 1px solid $green;
+        cursor: default;
+
+        &:hover {
+            background-color: $green;
+            border: 1px solid $green;
+        }
+    }
+}

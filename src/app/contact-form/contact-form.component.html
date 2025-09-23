@@ -1,18 +1,15 @@
-<main class="center">
+<main class="center" id="contact">
     <section class="header-section">
         <div class="vector-span"><span class="purple-vector"></span></div>
-        <h1>Contact</h1>
+        <h1>{{ "contact.title" | translate }}</h1>
     </section>
     <section>
         <div class="contact-instruction">
-            <h3>Got a problem to solve?</h3>
+            <h3>{{ "contact.problem" | translate }}</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
-                laborum labore eum, accusamus porro quidem quo rerum vel
-                exercitationem omnis tempore? Ex corporis qui facilis laudantium
-                vitae voluptate dicta beatae.
+                {{ "contact.description" | translate }}
             </p>
-            <p>Need a Frontend Developer? Contact me!</p>
+            <p>{{ "contact.need" | translate }}</p>
         </div>
         <div class="form-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -20,12 +17,15 @@
                 <div>
                     <input
                         [(ngModel)]="contactData.name"
-                        [ngClass]="{ invalid: !name.valid && name.touched, valid: name.valid && name.touched }"
+                        [ngClass]="{
+                            invalid: !name.valid && name.touched,
+                            valid: name.valid && name.touched
+                        }"
                         #name="ngModel"
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Your name"
+                        [placeholder]="'contact.name' | translate"
                         required
                     />
                     <span
@@ -45,7 +45,7 @@
                 </div>
                 <div *ngIf="!name.valid && name.touched">
                     <p style="color: red; margin-bottom: 10px">
-                        Please enter a name
+                        {{ "contact.error.name" | translate }}
                     </p>
                 </div>
                 <label for="email"></label>
@@ -57,7 +57,7 @@
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Your email"
+                        [placeholder]="'contact.email' | translate"
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                         required
                     />
@@ -81,13 +81,13 @@
                         *ngIf="email.errors?.['required']"
                         style="color: red; margin-bottom: 10px"
                     >
-                        Please enter an email address
+                        {{ "contact.error.email" | translate }}
                     </p>
                     <p
                         *ngIf="email.errors?.['pattern']"
                         style="color: red; margin-bottom: 10px"
                     >
-                        Please enter a valid email address format
+                        {{ "contact.error.emailPattern" | translate }}
                     </p>
                 </div>
                 <label for="message"></label>
@@ -102,7 +102,7 @@
                         id="message"
                         name="message"
                         minlength="3"
-                        placeholder="Your message"
+                        [placeholder]="'contact.message' | translate"
                         style="height: 200px"
                         required
                     ></textarea>
@@ -117,13 +117,13 @@
                         class="icon"
                         *ngIf="message.valid && message.touched"
                         style="
-                            content: url(../../assets/icons/green-checkmark.png),
+                            content: url(../../assets/icons/green-checkmark.png);
                         "
                     ></span>
                 </div>
                 <div *ngIf="!message.valid && message.touched">
                     <p style="color: red; margin-bottom: 10px">
-                        Please enter a message (minimum 3 characters)
+                        {{ "contact.error.message" | translate }}
                     </p>
                 </div>
                 <label class="checkbox-label" for="checkbox">
@@ -136,15 +136,17 @@
                         required
                     />
                     <p>
-                        I have read the
-                        <a class="link" href="#">privacy policy</a> and agree to
-                        the processing of my personal data as outlined.
+                        {{ "contact.privacy1" | translate }}
+                        <a class="link" href="#">{{
+                            "contact.privacyLink" | translate
+                        }}</a>
+                        {{ "contact.privacy2" | translate }}
                     </p>
                 </label>
 
                 <input
                     type="submit"
-                    value="Send Message"
+                    [value]="'contact.send' | translate"
                     [disabled]="
                         !checkbox.valid ||
                         !message.valid ||
@@ -156,6 +158,8 @@
         </div>
     </section>
     <section class="button-container">
-        <a class="button" href="#top"><img src="../../assets/icons/go-up-button.png"></a>
+        <a class="button" href="#top"
+            ><img src="../../assets/icons/go-up-button.png"
+        /></a>
     </section>
 </main>

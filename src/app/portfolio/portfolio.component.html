@@ -3,14 +3,14 @@
     <section class="center">
         <div class="portfolio-header">
             <span class="vector-span"><span class="first-vector"></span></span>
-            <h1>Portfolio</h1>
+            <h1>{{ "portfolio.title" | translate }}</h1>
             <span class="vector-span"><span class="second-vector"></span></span>
         </div>
         <div class="portfolio-intro">
-            <p>Here you can find some of my recent work and projects.</p>
+            <p>{{ "portfolio.description" | translate }}</p>
         </div>
         <div class="portfolio-items">
-            <app-portfolio-item 
+            <app-portfolio-item
                 *ngFor="let project of projects; let i = index"
                 [title]="project.title"
                 [description]="project.description"
@@ -19,7 +19,8 @@
                 [githubLink]="project.githubLink"
                 [liveLink]="project.liveLink"
                 [isReversed]="i % 2 === 1"
-                [index]="i">
+                [index]="i"
+            >
             </app-portfolio-item>
         </div>
     </section>

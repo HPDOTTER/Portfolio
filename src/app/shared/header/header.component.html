@@ -1,20 +1,18 @@
-<header>    
+<header>
     <div class="header-content">
         <div class="logo">
             <a href="">
-                <img src="../../../assets/img/logo-cut.png" alt="Logo">
+                <img src="../../../assets/img/logo-cut.png" alt="Logo" />
             </a>
         </div>
         <div class="navigation">
             <div class="header-links">
-                <a href="#about-me">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#about-me">{{ "nav.about" | translate }}</a>
+                <a href="#skills">{{ "nav.skills" | translate }}</a>
+                <a href="#portfolio">{{ "nav.portfolio" | translate }}</a>
+                <a href="#contact">{{ "nav.contact" | translate }}</a>
             </div>
-            <div class="language-switcher">
-                <button>DE</button>
-                <button>EN</button>
-            </div>
+            <app-language-switcher></app-language-switcher>
         </div>
     </div>
 </header>
