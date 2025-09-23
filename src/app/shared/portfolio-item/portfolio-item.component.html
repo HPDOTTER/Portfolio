@@ -1,38 +1,39 @@
 <section
-  class="portfolio-item"
-  [class.reversed]="isReversed"
-  [class]="'item-' + index"
+    class="portfolio-item"
+    [class.reversed]="isReversed"
+    [class]="'item-' + index"
 >
-  <!-- Bild-Sektion -->
-  <div class="image-section">
-    <img [src]="image" [alt]="title" class="project-image" />
-  </div>
-
-  <!-- Text-Sektion -->
-  <div class="content-section">
-    <h3>{{ title }}</h3>
-    <p class="project-description">{{ description }}</p>
-
-    <!-- Technologien -->
-    <div class="technologies">
-      <ng-container *ngFor="let tech of technologies; let last = last">
-        <span class="tech-item">{{ tech }}</span>
-        <span *ngIf="!last"> | </span>
-      </ng-container>
+    <div class="image-section">
+        <img [src]="image" [alt]="title" class="project-image" />
     </div>
 
-    <!-- Links -->
-    <div class="project-links">
-      <a
-        [href]="liveLink"
-        target="_blank"
-        class="btn-link primary"
-        *ngIf="liveLink"
-        >Live Test</a
-      >
-      <a [href]="githubLink" target="_blank" class="btn-link" *ngIf="githubLink"
-        >GitHub</a
-      >
+    <div class="content-section">
+        <h3>{{ title }}</h3>
+        <p class="project-description">{{ description }}</p>
+
+        <div class="technologies">
+            <ng-container *ngFor="let tech of technologies; let last = last">
+                <span class="tech-item">{{ tech }}</span>
+                <span *ngIf="!last"> | </span>
+            </ng-container>
+        </div>
+
+        <!-- Links -->
+        <div class="project-links">
+            <a
+                [href]="liveLink"
+                target="_blank"
+                class="btn-link primary"
+                *ngIf="liveLink"
+                >Live Test</a
+            >
+            <a
+                [href]="githubLink"
+                target="_blank"
+                class="btn-link"
+                *ngIf="githubLink"
+                >GitHub</a
+            >
+        </div>
     </div>
-  </div>
 </section>
