@@ -1,0 +1,116 @@
+@import "../../styles.scss";
+
+main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    width: 90%;
+    gap: 30px;
+    line-height: 120%;
+    font-family: "Open Sans", sans-serif;
+
+    h1 {
+        font-size: 61px;
+        color: $green;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 33px;
+        color: $purple;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: 19px;
+        color: $purple;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+}
+
+.head-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.purple-line-left {
+    position: relative;
+    width: 0px;
+    display: flex;
+    align-items: center;
+
+    span {
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background-color: #9747ff;
+        transform: translateX(-100px);
+    }
+}
+
+.purple-line-right {
+    position: relative;
+    width: 0px;
+    display: flex;
+    align-items: center;
+
+    span {
+        position: absolute;
+        width: 10000px;
+        height: 4px;
+        background-color: #9747ff;
+    }
+}
+
+section {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+
+    ul {
+        padding-left: 30px;
+    }
+}
+
+// Force styles on dynamically inserted content
+::ng-deep p a.link {
+    color: $purple;
+
+    &:hover {
+        color: lighten($purple, 10%);
+    }
+}
+
+::ng-deep button.green-button {
+    transition: transform 0.125s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+
+    a {
+        padding: 15px 30px;
+        background-color: $green;
+        border-radius: 10px;
+        font-size: 20px;
+
+        &:hover {
+            background-color: $purple;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+}

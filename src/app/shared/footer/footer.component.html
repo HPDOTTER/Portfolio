@@ -2,8 +2,15 @@
     <span class="footer-separator"></span>
     <section>
         <div class="footer-left">
-            <img src="../../../assets/img/logo-cut.png" alt="Logo" />
-            <a href="">{{ "footer.imprint" | translate }}</a>
+            <a href="/" routerLink="/"
+                ><img
+                    src="../../../assets/img/logo-cut.png"
+                    alt="Logo"
+                    style="text-decoration: none"
+            /></a>
+            <a class="footer-link" routerLink="/legal-notice">{{
+                "footer.imprint" | translate
+            }}</a>
         </div>
         <div class="footer-center">
             <p>© Johannes Nordmann 2025</p>

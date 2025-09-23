@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
     selector: 'app-contact-form',
     standalone: true,
-    imports: [FormsModule, CommonModule, TranslatePipe],
+    imports: [FormsModule, CommonModule, TranslatePipe, RouterLink],
     templateUrl: './contact-form.component.html',
     styleUrl: './contact-form.component.scss',
 })

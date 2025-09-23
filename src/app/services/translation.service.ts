@@ -77,8 +77,55 @@ export class TranslationService {
                 'Please enter a message (minimum 3 characters)',
 
             // Footer
-            'footer.imprint': 'Imprint',
+            'footer.imprint': 'Legal Notice',
             'footer.privacy': 'Privacy Policy',
+
+            // Legal Notice
+            'legal.title': 'Legal Notice',
+            'legal.responsibility': 'Imprint',
+            'legal.contact': 'Contact Information',
+            'legal.terms': 'Acceptance of terms',
+            'legal.termsText':
+                'By accessing and using <a class="link" href="/" routerLink="/">Portfolio</a> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.',
+            'legal.ownership': 'Scope and ownership of the product',
+            'legal.ownershipText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> has been developed as part of a student project in a web development bootcamp at the <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. The design of <a class="link" href="/" routerLink="/">Portfolio</a> is owned by the <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.',
+            'legal.rights': 'Proprietary rights',
+            'legal.rightsText':
+                'Aside from the design owned by <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>, we, the listed students, retain all proprietary rights in <a class="link" href="/" routerLink="/">Portfolio</a>, including any associated copyrighted material, trademarks, and other proprietary information.',
+            'legal.productuse': 'Use of the product',
+            'legal.productuseText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <a class="link" href="/" routerLink="/">Portfolio</a> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <a class="link" href="/" routerLink="/">Portfolio</a>.',
+            'legal.disclaimer':
+                'Disclaimer of warranties and limitation of liability',
+            'legal.disclaimerText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <a class="link" href="/" routerLink="/">Portfolio</a>.',
+            'legal.indemnification': 'Indemnity',
+            'legal.indemnificationText':
+                'You agree to indemnify, defend and hold harmless us, the listed students, the <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <a class="link" href="/" routerLink="/">Portfolio</a> and/or your breach of this Legal Notice.',
+            'legal.indemnificationSubText': 'For any questions or notices, please contact me at <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
+            'legal.indemnificationDate': 'September 30, 2025',
+            
+            // Privacy Policy
+            'privacy.title': 'Privacy Policy',
+            'privacy.overview': 'Overview',
+            'privacy.overviewText':
+                'This privacy policy will explain how our organization uses the personal data we collect from you when you use our website.',
+            'privacy.dataCollection': 'What data do we collect?',
+            'privacy.dataCollectionText':
+                'We collect the following data: Personal identification information (Name, email address, etc.) when you voluntarily submit this information through our contact forms.',
+            'privacy.dataUse': 'How do we use your data?',
+            'privacy.dataUseText':
+                'We use the data to respond to your inquiries and to improve our website. We do not share your personal data with third parties unless required by law.',
+            'privacy.dataStorage': 'How do we store your data?',
+            'privacy.dataStorageText':
+                'Your data is securely stored and we will keep your contact information until you request its deletion.',
+            'privacy.contact': 'Contact Information',
+            'privacy.contactText':
+                'If you have any questions about this privacy policy, please contact us.',
+
+            // Common
+            'common.backToPortfolio': 'Back to Portfolio',
         },
         de: {
             // Navigation
@@ -145,6 +192,52 @@ export class TranslationService {
             // Footer
             'footer.imprint': 'Impressum',
             'footer.privacy': 'Datenschutzerklärung',
+
+            // Legal Notice
+            'legal.title': 'Impressum',
+            'legal.responsibility': 'Haftungshinweis',
+            'legal.contact': 'Kontaktinformationen',
+            'legal.terms': 'Akzeptanz der Bedingungen',
+            'legal.termsText':
+                'Durch den Zugriff auf und die Nutzung von <a class="link" href="/" routerLink="/">Portfolio</a> (Produkt) erkennen Sie die folgenden Bedingungen und Konditionen sowie alle Richtlinien, Leitlinien oder Änderungen, die Ihnen von Zeit zu Zeit präsentiert werden können, an und stimmen diesen zu. Wir, die aufgeführten Studenten, können die Bedingungen und Konditionen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.',
+            'legal.ownership': 'Umfang und Eigentum des Produkts',
+            'legal.ownershipText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> wurde im Rahmen eines studentischen Projekts in einem Webentwicklungs-Bootcamp der <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a> entwickelt. Es hat einen Bildungszweck und ist nicht für umfangreiche persönliche und geschäftliche Nutzung gedacht. Daher können wir keine konsistente Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder einen anderen Aspekt der Qualität dieses Produkts garantieren. Das Design von <a class="link" href="/" routerLink="/">Portfolio</a> gehört der <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>. Die unbefugte Nutzung, Vervielfältigung, Modifikation, Verteilung oder Replikation des Designs ist strengstens untersagt.',
+            'legal.rights': 'Eigentumsrechte',
+            'legal.rightsText':
+                'Abgesehen von dem Design, das der <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a> gehört, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an <a class="link" href="/" routerLink="/">Portfolio</a>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und anderer proprietärer Informationen.',
+            'legal.productuse': 'Nutzung des Produkts',
+            'legal.productuseText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jegliche Nutzung von <a class="link" href="/" routerLink="/">Portfolio</a> für illegale Aktivitäten oder um andere Personen zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <a class="link" href="/" routerLink="/">Portfolio</a>.',
+            'legal.disclaimer': 'Haftungsausschluss und Begrenzung der Haftung',
+            'legal.disclaimerText':
+                '<a class="link" href="/" routerLink="/">Portfolio</a> wird "wie besehen" ohne jegliche Gewährleistung bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Garantien der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. In keinem Fall haften wir, die aufgeführten Studenten, oder die <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a> für direkte, indirekte, zufällige, besondere, Folgeschäden oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden für entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus der Nutzung oder Leistung von <a class="link" href="/" routerLink="/">Portfolio</a> ergeben.',
+            'legal.indemnification': 'Freistellung',
+            'legal.indemnificationText':
+                'Sie erklären sich damit einverstanden, uns, die aufgeführten Studenten, die <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a> sowie unsere verbundenen Unternehmen, Partner, Geschäftsführer, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten), die sich aus Ihrer Nutzung von <a class="link" href="/" routerLink="/">Portfolio</a> und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben, schadlos zu halten, zu verteidigen und freizustellen. Datum: 26. Juli 2025',
+            'legal.indemnificationSubText': 'Für Fragen oder Hinweise kontaktieren Sie uns bitte unter <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
+            'legal.indemnificationDate': 'September 30, 2025',
+            
+            // Privacy Policy
+            'privacy.title': 'Datenschutzerklärung',
+            'privacy.overview': 'Überblick',
+            'privacy.overviewText':
+                'Diese Datenschutzerklärung erklärt, wie unsere Organisation die personenbezogenen Daten verwendet, die wir von Ihnen sammeln, wenn Sie unsere Website nutzen.',
+            'privacy.dataCollection': 'Welche Daten sammeln wir?',
+            'privacy.dataCollectionText':
+                'Wir sammeln folgende Daten: Persönliche Identifikationsinformationen (Name, E-Mail-Adresse, etc.), wenn Sie diese Informationen freiwillig über unsere Kontaktformulare übermitteln.',
+            'privacy.dataUse': 'Wie verwenden wir Ihre Daten?',
+            'privacy.dataUseText':
+                'Wir verwenden die Daten, um auf Ihre Anfragen zu antworten und unsere Website zu verbessern. Wir geben Ihre persönlichen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.',
+            'privacy.dataStorage': 'Wie speichern wir Ihre Daten?',
+            'privacy.dataStorageText':
+                'Ihre Daten werden sicher gespeichert und wir bewahren Ihre Kontaktinformationen auf, bis Sie deren Löschung beantragen.',
+            'privacy.contact': 'Kontaktinformationen',
+            'privacy.contactText':
+                'Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte.',
+
+            // Common
+            'common.backToPortfolio': 'Zurück zum Portfolio',
         },
     };
 
