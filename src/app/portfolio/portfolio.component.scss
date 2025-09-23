@@ -1,6 +1,7 @@
 @import '../../styles.scss';
 
 main {
+    position: relative;
     padding-top: 80px;
 }
 
@@ -59,25 +60,14 @@ section {
 }
 
 
-.shade-container-one {
+.purple-shade {
+    content: url(../../assets/img/purple-shadow-portfolio.png);
     position: absolute;
-    left: -50%;
-    bottom: 50%;
-}
-
-.shade-container-one {
-    position: absolute;
-    left: -50%;
-    bottom: 50%;
-}
-
-.green-shade {
-    content: url('../../assets/img/green-shadow-portfolio.png');
-    position: absolute;
-    width: 500px;
+    width: 40%;
     height: auto;
-    z-index: -10;
-    overflow-x: hidden;
+    left: -20%;
+    bottom: 20%;
+    z-index: -1;
 }
 
 // Responsive Design
