@@ -9,6 +9,8 @@
 main {
     flex-direction: column;
     height: 180px;
+    z-index: 2;
+    background-color: $background;
 }
 
 section {

@@ -25,7 +25,7 @@ export class PortfolioComponent {
             title: 'Join Task Manager',
             description:
                 'Eine Task-Management-App, die Teams dabei hilft, Projekte zu organisieren und zu verfolgen. Mit Drag & Drop, Benutzerrollen und Real-Time Updates.',
-            image: '',
+            image: '../../assets/img/join-example.png',
             technologies: ['Angular', 'TypeScript', 'Firebase', 'HTML', 'SCSS'],
             githubLink: 'https://github.com/username/join',
             liveLink: 'https://join-app.example.com',
@@ -34,7 +34,7 @@ export class PortfolioComponent {
             title: 'El Pollo Loco Game',
             description:
                 'Ein 2D Jump & Run Spiel mit HTML5 Canvas. Sammle Münzen, besiege Gegner und erreiche das Ziel in diesem unterhaltsamen Browser-Spiel.',
-            image: '',
+            image: '../../assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://github.com/username/el-pollo-loco',
             liveLink: 'https://el-pollo-loco.example.com',

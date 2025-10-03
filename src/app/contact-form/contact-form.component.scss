@@ -2,6 +2,8 @@
 
 main {
     padding-top: 100px;
+    overflow: hidden;
+    position: relative;
 }
 
 section {
@@ -238,4 +240,17 @@ form {
         width: 40px;
         margin: 10px;
     }
+}
+
+.background-shade {
+    content: url(../../assets/img/purple-shadow-portfolio.png);
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -20%;
+    bottom: -455%;
+    width: 35%;
+    height: auto;
+    z-index: -1;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }

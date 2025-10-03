@@ -103,29 +103,77 @@ export class TranslationService {
             'legal.indemnification': 'Indemnity',
             'legal.indemnificationText':
                 'You agree to indemnify, defend and hold harmless us, the listed students, the <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <a class="link" href="/" routerLink="/">Portfolio</a> and/or your breach of this Legal Notice.',
-            'legal.indemnificationSubText': 'For any questions or notices, please contact me at <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
+            'legal.indemnificationSubText':
+                'For any questions or notices, please contact me at <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
             'legal.indemnificationDate': 'September 30, 2025',
-            
+
             // Privacy Policy
             'privacy.title': 'Privacy Policy',
-            'privacy.overview': 'Overview',
+            'privacy.overview': 'Data Protection Overview',
             'privacy.overviewText':
-                'This privacy policy will explain how our organization uses the personal data we collect from you when you use our website.',
-            'privacy.dataCollection': 'What data do we collect?',
+                'The following gives a simple overview of what happens to your personal information when you visit this website. Personal information is any data with which you could be personally identified.',
+
+            'privacy.responsible':
+                'Who is responsible for the data collection on this website?',
+            'privacy.responsibleText':
+                "The data collected on this website are processed by the website operator. The operator's contact details can be found in the website's required legal notice.",
+
+            'privacy.dataCollection': 'How do we record your data?',
             'privacy.dataCollectionText':
-                'We collect the following data: Personal identification information (Name, email address, etc.) when you voluntarily submit this information through our contact forms.',
-            'privacy.dataUse': 'How do we use your data?',
+                'Some data are collected when you provide it to us. This could, for example, be data you enter on a contact form. Other data are collected automatically or after you consent to its collection when you visit the website. This data are primarily technical data such as the browser and operating system you are using or when you accessed the page.',
+
+            'privacy.dataUse': 'What do we use your data for?',
             'privacy.dataUseText':
-                'We use the data to respond to your inquiries and to improve our website. We do not share your personal data with third parties unless required by law.',
-            'privacy.dataStorage': 'How do we store your data?',
-            'privacy.dataStorageText':
-                'Your data is securely stored and we will keep your contact information until you request its deletion.',
+                'Part of the data is collected to ensure the proper functioning of the website. Other data can be used to analyze how visitors use the site and to respond to your inquiries submitted through the contact form.',
+
+            'privacy.dataRights':
+                'What rights do you have regarding your data?',
+            'privacy.dataRightsText':
+                'You always have the right to request information about your stored data, its origin, its recipients, and the purpose of its collection at no charge. You also have the right to request that it be corrected or deleted.',
+
+            'privacy.hosting': 'Hosting',
+            'privacy.hostingTitle': 'External Hosting',
+            'privacy.hostingText':
+                "This website is hosted by an external service provider (hoster). Personal data collected on this website are stored on the hoster's servers. The hoster processes the data solely on our behalf and may not use it for its own purposes.",
+
+            'privacy.contactForm': 'Contact Form',
+            'privacy.contactFormTitle': 'Data transmitted via contact form',
+            'privacy.contactFormText':
+                'If you send us questions via the contact form, we will collect the data entered on the form, including the contact details you provide, to answer your question and any follow-up questions. We do not share this information without your permission.',
+            'privacy.contactFormLegal':
+                'The processing of data submitted in the contact form is based on your consent (Art. 6 (1) (a) GDPR). You may revoke your consent at any time. The data processed before we receive your request may still be legally processed.',
+            'privacy.contactFormStorage':
+                'The data you submit via the contact form will remain with us until you request us to delete it, revoke your consent for its storage, or the purpose for its storage no longer pertains.',
+
+            'privacy.localStorage': 'Browser Data Storage',
+            'privacy.localStorageTitle': 'Local Storage',
+            'privacy.localStorageText':
+                "This website uses browser local storage to save your language preference. This data is stored locally in your browser and is not transmitted to our servers. You can delete this data at any time by clearing your browser's local storage.",
+
+            'privacy.rights': 'Your Rights',
+            'privacy.rightsTitle':
+                'Right to information, deletion, and correction',
+            'privacy.rightsText':
+                'You have the right to free information about your stored personal data, its origin and recipients, and the purpose of data processing at any time, as well as a right to correction or deletion of this data.',
+            'privacy.rightsContact':
+                'For this purpose, as well as for further questions about personal data, you can contact us at any time.',
+
+            'privacy.complaint': 'Right to lodge a complaint',
+            'privacy.complaintText':
+                'If you believe that the processing of your personal data violates the GDPR, you have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence, place of work, or place of the alleged infringement.',
+
             'privacy.contact': 'Contact Information',
             'privacy.contactText':
-                'If you have any questions about this privacy policy, please contact us.',
+                'If you have any questions about this privacy policy or data protection, please contact:',
+            'privacy.contactDetails':
+                'Johannes Nordmann<br>Pfarrer-Tremel-Weg 5<br>82399 Raisting<br>Email: johannes-nordmann&#64;live.de',
+
+            'privacy.effectiveDate': 'Effective Date',
+            'privacy.effectiveDateText':
+                'This privacy policy is effective as of September 30, 2025.',
 
             // Common
-            'common.backToPortfolio': 'Back to Portfolio',
+            'common.backToPortfolio': 'Back to Home',
         },
         de: {
             // Navigation
@@ -215,29 +263,77 @@ export class TranslationService {
             'legal.indemnification': 'Freistellung',
             'legal.indemnificationText':
                 'Sie erklären sich damit einverstanden, uns, die aufgeführten Studenten, die <a class="link" href="https://developerakademie.com/">Developer Akademie GmbH</a> sowie unsere verbundenen Unternehmen, Partner, Geschäftsführer, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten), die sich aus Ihrer Nutzung von <a class="link" href="/" routerLink="/">Portfolio</a> und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben, schadlos zu halten, zu verteidigen und freizustellen. Datum: 26. Juli 2025',
-            'legal.indemnificationSubText': 'Für Fragen oder Hinweise kontaktieren Sie uns bitte unter <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
+            'legal.indemnificationSubText':
+                'Für Fragen oder Hinweise kontaktieren Sie uns bitte unter <a class="link" href="">Johannes-nordmann&#64;live.de</a>.',
             'legal.indemnificationDate': 'September 30, 2025',
-            
+
             // Privacy Policy
             'privacy.title': 'Datenschutzerklärung',
-            'privacy.overview': 'Überblick',
+            'privacy.overview': 'Datenschutz auf einen Blick',
             'privacy.overviewText':
-                'Diese Datenschutzerklärung erklärt, wie unsere Organisation die personenbezogenen Daten verwendet, die wir von Ihnen sammeln, wenn Sie unsere Website nutzen.',
-            'privacy.dataCollection': 'Welche Daten sammeln wir?',
+                'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
+
+            'privacy.responsible':
+                'Wer ist verantwortlich für die Datenerfassung auf dieser Website?',
+            'privacy.responsibleText':
+                'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.',
+
+            'privacy.dataCollection': 'Wie erfassen wir Ihre Daten?',
             'privacy.dataCollectionText':
-                'Wir sammeln folgende Daten: Persönliche Identifikationsinformationen (Name, E-Mail-Adresse, etc.), wenn Sie diese Informationen freiwillig über unsere Kontaktformulare übermitteln.',
-            'privacy.dataUse': 'Wie verwenden wir Ihre Daten?',
+                'Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).',
+
+            'privacy.dataUse': 'Wofür nutzen wir Ihre Daten?',
             'privacy.dataUseText':
-                'Wir verwenden die Daten, um auf Ihre Anfragen zu antworten und unsere Website zu verbessern. Wir geben Ihre persönlichen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.',
-            'privacy.dataStorage': 'Wie speichern wir Ihre Daten?',
-            'privacy.dataStorageText':
-                'Ihre Daten werden sicher gespeichert und wir bewahren Ihre Kontaktinformationen auf, bis Sie deren Löschung beantragen.',
+                'Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden und zur Beantwortung Ihrer über das Kontaktformular gesendeten Anfragen.',
+
+            'privacy.dataRights':
+                'Welche Rechte haben Sie bezüglich Ihrer Daten?',
+            'privacy.dataRightsText':
+                'Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.',
+
+            'privacy.hosting': 'Hosting',
+            'privacy.hostingTitle': 'Externes Hosting',
+            'privacy.hostingText':
+                'Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Der Hoster verarbeitet die Daten ausschließlich in unserem Auftrag und darf sie nicht für eigene Zwecke verwenden.',
+
+            'privacy.contactForm': 'Kontaktformular',
+            'privacy.contactFormTitle': 'Datenübertragung bei Kontaktaufnahme',
+            'privacy.contactFormText':
+                'Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.',
+            'privacy.contactFormLegal':
+                'Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf der Grundlage von Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie können diese Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.',
+            'privacy.contactFormStorage':
+                'Die von Ihnen über das Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt.',
+
+            'privacy.localStorage': 'Browser-Datenspeicherung',
+            'privacy.localStorageTitle': 'Local Storage',
+            'privacy.localStorageText':
+                'Diese Website verwendet den Local Storage des Browsers, um Ihre Spracheinstellung zu speichern. Diese Daten werden lokal in Ihrem Browser gespeichert und nicht an unsere Server übertragen. Sie können diese Daten jederzeit löschen, indem Sie den Local Storage Ihres Browsers leeren.',
+
+            'privacy.rights': 'Ihre Rechte',
+            'privacy.rightsTitle':
+                'Recht auf Auskunft, Löschung und Berichtigung',
+            'privacy.rightsText':
+                'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten.',
+            'privacy.rightsContact':
+                'Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.',
+
+            'privacy.complaint': 'Recht auf Beschwerde',
+            'privacy.complaintText':
+                'Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthalts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.',
+
             'privacy.contact': 'Kontaktinformationen',
             'privacy.contactText':
-                'Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte.',
+                'Bei Fragen zu dieser Datenschutzerklärung oder zum Datenschutz wenden Sie sich bitte an:',
+            'privacy.contactDetails':
+                'Johannes Nordmann<br>Pfarrer-Tremel-Weg 5<br>82399 Raisting<br>E-Mail: johannes-nordmann&#64;live.de',
+
+            'privacy.effectiveDate': 'Gültigkeitsdatum',
+            'privacy.effectiveDateText':
+                'Diese Datenschutzerklärung ist gültig ab dem 30. September 2025.',
 
             // Common
-            'common.backToPortfolio': 'Zurück zum Portfolio',
+            'common.backToPortfolio': 'Zurück zur Startseite',
         },
     };
 
