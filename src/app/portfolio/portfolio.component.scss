@@ -73,12 +73,7 @@ section {
 // Responsive Design
 @media (max-width: 768px) {
     .portfolio-header {
-        flex-direction: column;
         gap: 20px;
-        
-        h1 {
-            font-size: 60px;
-        }
     }
     
     .portfolio-intro {

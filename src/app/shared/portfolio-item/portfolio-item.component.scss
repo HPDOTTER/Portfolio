@@ -89,6 +89,7 @@ h3 {
     .project-links {
         display: flex;
         gap: 15px;
+        width: 300px;
 
         .btn-link {
             padding: 12px 24px;
@@ -118,18 +119,40 @@ h3 {
     }
 }
 
-// Responsive Design
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex-direction: column;
-        gap: 30px;
+@media (max-width: 850px) {
+    section {
+        flex-direction: column !important;
+        margin-bottom: 50px !important;
 
-        .content-section {
-            text-align: center;
-
-            .project-links {
-                justify-content: center;
-            }
+        div {
+            align-items: center;
+            justify-content: center;
         }
+    }
+
+    div img {
+        width: 300px;
+        height: auto !important;
+    }
+
+    .content-section {
+        text-align: center !important;
+        width: 300px;
+    }
+
+    .portfolio-item {
+        gap: 0px;
+    }
+
+    .project-links {
+        justify-content: center !important;
+    }
+
+    .technologies {
+        font-size: 20px !important;
+    }
+
+    .project-description {
+        line-height: 1.2;
     }
 }

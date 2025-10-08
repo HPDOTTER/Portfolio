@@ -34,11 +34,31 @@
 
 .language-switcher-mobile {
     display: none;
+    gap: 20px;
+
+    button {
+        text-decoration: none;
+        background: none;
+        border: none;
+        font-size: 25px;
+
+        &:hover {
+            color: $purple;
+        }
+
+        &.active {
+            color: $green;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
 }
 
 @media (max-width: 880px) {
     .language-switcher-mobile {
-        display: block;
+        display: flex;
     }
 
     .language-switcher {

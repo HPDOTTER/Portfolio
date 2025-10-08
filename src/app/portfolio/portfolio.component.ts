@@ -27,7 +27,7 @@ export class PortfolioComponent {
         {
             title: 'Join Task Manager',
             descriptionKey: 'project.join.description',
-            image: '../../assets/img/join-example.png',
+            image: './assets/img/join-example.png',
             technologies: ['Angular', 'TypeScript', 'Firebase', 'HTML', 'SCSS'],
             githubLink: 'https://github.com/username/join',
             liveLink: 'https://join-app.example.com',
@@ -35,7 +35,7 @@ export class PortfolioComponent {
         {
             title: 'El Pollo Loco Game',
             descriptionKey: 'project.polloLoco.description',
-            image: '../../assets/img/pollo-loco-example.png',
+            image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://github.com/username/el-pollo-loco',
             liveLink: 'https://el-pollo-loco.example.com',
@@ -43,7 +43,7 @@ export class PortfolioComponent {
         {
             title: 'Pokédex',
             descriptionKey: 'project.pokedex.description',
-            image: '../../assets/img/join-example.png',
+            image: './assets/img/join-example.png',
             technologies: [
                 'JavaScript',
                 'REST API',
@@ -57,7 +57,7 @@ export class PortfolioComponent {
         {
             title: 'DA Bubble Chat',
             descriptionKey: 'project.daBubble.description',
-            image: '../../assets/img/join-example.png',
+            image: './assets/img/join-example.png',
             technologies: [
                 'Angular',
                 'Firebase',
@@ -71,7 +71,7 @@ export class PortfolioComponent {
         {
             title: 'Portfolio Website',
             descriptionKey: 'project.portfolio.description',
-            image: '../../assets/img/join-example.png',
+            image: './assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
             githubLink: 'https://github.com/username/portfolio',
             liveLink: 'https://portfolio.example.com',

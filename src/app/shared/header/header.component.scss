@@ -84,6 +84,19 @@ img {
     }
 }
 
+.mobile-overlay-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 10%;
+    position: absolute;
+    top: 0;
+    background-color: $background;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
 .logo-small {
     display: none;
     height: 40px;
@@ -92,40 +105,69 @@ img {
 .mobile-overlay {
     min-height: 100svh;
     max-height: 100svh;
+    min-width: 100svw;
+    max-width: 100svw;
     position: fixed;
-    display: none;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
+    z-index: 100;
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+
+        .mobile-header-links {
+            transform: translateX(0);
+        }
+    }
 }
 
 .mobile-header-links {
-    position: absolute;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    gap: 30px;
+    font-size: 30px;
     color: white;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    cursor: default;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: $green;
+        }
+    }
 }
 
 @media (max-width: 1060px) {
     .logo-big {
         height: 35px;
     }
+    .header-links {
+        gap: 20px;
+    }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 950px) {
     .logo-big {
         display: none;
     }

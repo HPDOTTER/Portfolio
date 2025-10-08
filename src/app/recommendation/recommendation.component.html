@@ -49,37 +49,37 @@
         <div class="recommendation-selection">
             <img
                 (click)="previousRecommendation()"
-                src="../../assets/icons/arrow-green.png"
+                src="./assets/icons/arrow-green.png"
                 class="recommendation-arrow"
                 alt=""
             />
             <img
                 [src]="
                     currentIndex === 0
-                        ? '../../assets/icons/dot-green.png'
-                        : '../../assets/icons/dot-purple.png'
+                        ? './assets/icons/dot-green.png'
+                        : './assets/icons/dot-purple.png'
                 "
                 alt=""
             />
             <img
                 [src]="
                     currentIndex === 1
-                        ? '../../assets/icons/dot-green.png'
-                        : '../../assets/icons/dot-purple.png'
+                        ? './assets/icons/dot-green.png'
+                        : './assets/icons/dot-purple.png'
                 "
                 alt=""
             />
             <img
                 [src]="
                     currentIndex === 2
-                        ? '../../assets/icons/dot-green.png'
-                        : '../../assets/icons/dot-purple.png'
+                        ? './assets/icons/dot-green.png'
+                        : './assets/icons/dot-purple.png'
                 "
                 alt=""
             />
             <img
                 (click)="nextRecommendation()"
-                src="../../assets/icons/arrow-green.png"
+                src="./assets/icons/arrow-green.png"
                 class="recommendation-arrow"
                 alt=""
                 style="transform: rotate(180deg)"

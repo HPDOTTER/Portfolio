@@ -13,7 +13,6 @@ main {
     background-repeat: no-repeat;
 }
 
-
 .hero {
     position: relative;
     width: 90%;
@@ -134,4 +133,14 @@ main {
     width: 1480px;
     height: 4px;
     background-color: $purple;
+}
+
+.background-shade {
+    content: url(../../assets/img/about-me-shadow.png);
+    position: absolute;
+    width: 60%;
+    height: auto;
+    right: -50%;
+    bottom: -80%;
+    z-index: -1;
 }

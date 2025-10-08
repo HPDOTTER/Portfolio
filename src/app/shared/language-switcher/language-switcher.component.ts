@@ -22,10 +22,10 @@ export class LanguageSwitcherComponent {
         this.translationService.setLanguage(lang);
     }
 
-    onLanguageChange(event: Event): void {
-        const target = event.target as HTMLSelectElement;
-        if (target && target.value) {
-            this.switchLanguage(target.value);
+    closeMenu(): void {
+        const overlay = document.getElementById('mobile-overlay');
+        if (overlay && overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
         }
     }
 }

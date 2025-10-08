@@ -4,12 +4,12 @@
             <a routerLink="/">
                 <img
                     class="logo-big"
-                    src="../../../assets/img/logo-cut.png"
+                    src="./assets/img/logo-cut.png"
                     alt="Logo"
                 />
                 <img
                     class="logo-small"
-                    src="../../../assets/img/favicon.png"
+                    src="./assets/img/favicon.png"
                     alt=""
                 />
             </a>
@@ -24,16 +24,28 @@
             <app-language-switcher></app-language-switcher>
         </div>
         <div class="burger-menu" (click)="toggleMenu()">
-            <img src="../../../assets/icons/burgermenu.png"/>
+            <img src="./assets/icons/burgermenu.png" />
         </div>
     </div>
 </header>
 <div class="mobile-overlay" id="mobile-overlay" (click)="toggleMenu()">
+    <div class="mobile-overlay-header" >
+        <img style="height: 40px;" src="./assets/img/favicon.png" />
+        <img style="height: 30px;" src="./assets/icons/close.png" />
+    </div>
     <div class="mobile-header-links">
-                <a href="#about-me">{{ "nav.about" | translate }}</a>
-                <a href="#skills">{{ "nav.skills" | translate }}</a>
-                <a href="#portfolio">{{ "nav.portfolio" | translate }}</a>
-                <a href="#contact">{{ "nav.contact" | translate }}</a>
-            </div>
-            <app-language-switcher></app-language-switcher>
+        <a href="#about-me" (click)="closeMenu()">{{
+            "nav.about" | translate
+        }}</a>
+        <a href="#skills" (click)="closeMenu()">{{
+            "nav.skills" | translate
+        }}</a>
+        <a href="#portfolio" (click)="closeMenu()">{{
+            "nav.portfolio" | translate
+        }}</a>
+        <a href="#contact" (click)="closeMenu()">{{
+            "nav.contact" | translate
+        }}</a>
+        <app-language-switcher></app-language-switcher>
+    </div>
 </div>

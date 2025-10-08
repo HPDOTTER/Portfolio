@@ -13,12 +13,17 @@
     </button>
 </div>
 <div class="language-switcher-mobile"> 
-    <select
-        class="lang-select"
-        [value]="currentLanguage"
-        (change)="onLanguageChange($event)"
+    <button
+        [class.active]="currentLanguage === 'en'"
+        (click)="switchLanguage('en'); closeMenu()"
     >
-        <option value="en">EN</option>
-        <option value="de">DE</option>
-    </select>
+        EN
+    </button>
+    <p>/</p>
+    <button
+        [class.active]="currentLanguage === 'de'"
+        (click)="switchLanguage('de'); closeMenu()"
+    >
+        DE
+    </button>
 </div>
