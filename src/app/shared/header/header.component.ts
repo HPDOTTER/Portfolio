@@ -10,4 +10,14 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+    toggleMenu() {
+        const overlay = document.getElementById('mobile-overlay');
+        if (overlay) {
+            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+        }
+    }
+
+    
+}

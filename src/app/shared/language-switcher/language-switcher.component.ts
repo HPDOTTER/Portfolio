@@ -21,4 +21,11 @@ export class LanguageSwitcherComponent {
     switchLanguage(lang: string): void {
         this.translationService.setLanguage(lang);
     }
+
+    onLanguageChange(event: Event): void {
+        const target = event.target as HTMLSelectElement;
+        if (target && target.value) {
+            this.switchLanguage(target.value);
+        }
+    }
 }

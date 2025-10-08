@@ -2,7 +2,16 @@
     <div class="header-content">
         <div class="logo">
             <a routerLink="/">
-                <img src="../../../assets/img/logo-cut.png" alt="Logo" />
+                <img
+                    class="logo-big"
+                    src="../../../assets/img/logo-cut.png"
+                    alt="Logo"
+                />
+                <img
+                    class="logo-small"
+                    src="../../../assets/img/favicon.png"
+                    alt=""
+                />
             </a>
         </div>
         <div class="navigation">
@@ -14,5 +23,17 @@
             </div>
             <app-language-switcher></app-language-switcher>
         </div>
+        <div class="burger-menu" (click)="toggleMenu()">
+            <img src="../../../assets/icons/burgermenu.png"/>
+        </div>
     </div>
 </header>
+<div class="mobile-overlay" id="mobile-overlay" (click)="toggleMenu()">
+    <div class="mobile-header-links">
+                <a href="#about-me">{{ "nav.about" | translate }}</a>
+                <a href="#skills">{{ "nav.skills" | translate }}</a>
+                <a href="#portfolio">{{ "nav.portfolio" | translate }}</a>
+                <a href="#contact">{{ "nav.contact" | translate }}</a>
+            </div>
+            <app-language-switcher></app-language-switcher>
+</div>

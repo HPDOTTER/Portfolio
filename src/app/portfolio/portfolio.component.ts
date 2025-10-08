@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioItemComponent } from '../shared/portfolio-item/portfolio-item.component';
 import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
 
 interface Project {
     title: string;
-    description: string;
+    descriptionKey: string; // Changed to store translation key instead of direct text
     image: string;
     technologies: string[];
     githubLink: string;
@@ -20,11 +21,12 @@ interface Project {
     styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
+    constructor(private translationService: TranslationService) {}
+
     projects: Project[] = [
         {
             title: 'Join Task Manager',
-            description:
-                'Eine Task-Management-App, die Teams dabei hilft, Projekte zu organisieren und zu verfolgen. Mit Drag & Drop, Benutzerrollen und Real-Time Updates.',
+            descriptionKey: 'project.join.description',
             image: '../../assets/img/join-example.png',
             technologies: ['Angular', 'TypeScript', 'Firebase', 'HTML', 'SCSS'],
             githubLink: 'https://github.com/username/join',
@@ -32,8 +34,7 @@ export class PortfolioComponent {
         },
         {
             title: 'El Pollo Loco Game',
-            description:
-                'Ein 2D Jump & Run Spiel mit HTML5 Canvas. Sammle Münzen, besiege Gegner und erreiche das Ziel in diesem unterhaltsamen Browser-Spiel.',
+            descriptionKey: 'project.polloLoco.description',
             image: '../../assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://github.com/username/el-pollo-loco',
@@ -41,9 +42,8 @@ export class PortfolioComponent {
         },
         {
             title: 'Pokédex',
-            description:
-                'Eine interaktive Pokédex-Anwendung, die die PokéAPI nutzt. Durchsuche, filtere und erkunde alle Pokémon mit detaillierten Informationen.',
-            image: '',
+            descriptionKey: 'project.pokedex.description',
+            image: '../../assets/img/join-example.png',
             technologies: [
                 'JavaScript',
                 'REST API',
@@ -56,9 +56,8 @@ export class PortfolioComponent {
         },
         {
             title: 'DA Bubble Chat',
-            description:
-                'Eine moderne Chat-Anwendung für Teams. Mit Channels, Direct Messages, File Sharing und einer intuitiven Benutzeroberfläche.',
-            image: '',
+            descriptionKey: 'project.daBubble.description',
+            image: '../../assets/img/join-example.png',
             technologies: [
                 'Angular',
                 'Firebase',
@@ -71,12 +70,16 @@ export class PortfolioComponent {
         },
         {
             title: 'Portfolio Website',
-            description:
-                'Meine persönliche Portfolio-Website, die Sie gerade besuchen. Responsive Design, moderne Animationen und optimale Performance.',
-            image: '',
+            descriptionKey: 'project.portfolio.description',
+            image: '../../assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
             githubLink: 'https://github.com/username/portfolio',
             liveLink: 'https://portfolio.example.com',
         },
     ];
+
+    // Method to get translated description
+    getProjectDescription(descriptionKey: string): string {
+        return this.translationService.translate(descriptionKey);
+    }
 }

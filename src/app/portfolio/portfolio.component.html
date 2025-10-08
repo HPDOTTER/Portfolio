@@ -13,7 +13,7 @@
             <app-portfolio-item
                 *ngFor="let project of projects; let i = index"
                 [title]="project.title"
-                [description]="project.description"
+                [description]="getProjectDescription(project.descriptionKey)"
                 [image]="project.image"
                 [technologies]="project.technologies"
                 [githubLink]="project.githubLink"

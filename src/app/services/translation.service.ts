@@ -55,6 +55,34 @@ export class TranslationService {
             'portfolio.description':
                 'Here you can find some of my recent work and projects.',
 
+            // Project Descriptions
+            'project.join.description':
+                'A task management app that helps teams organize and track projects. With drag & drop, user roles, and real-time updates.',
+            'project.polloLoco.description':
+                'A 2D jump & run game built with HTML5 Canvas. Collect coins, defeat enemies and reach the goal in this entertaining browser game.',
+            'project.pokedex.description':
+                'An interactive Pokédex application using the PokéAPI. Browse, filter, and explore all Pokémon with detailed information.',
+            'project.daBubble.description':
+                'A modern chat application for teams. Features channels, direct messages, file sharing, and an intuitive user interface.',
+            'project.portfolio.description':
+                'My personal portfolio website that you are currently visiting. Responsive design, modern animations, and optimal performance.',
+
+            // Recommendations Section
+            'recommendation.max.name': 'Max Mustermann',
+            'recommendation.max.role': 'Project Manager at Tech Solutions',
+            'recommendation.max.text':
+                'I had the pleasure of working with Johannes on several projects. Their ability to solve complex problems and find innovative solutions is impressive. They bring not only technical know-how but also a positive attitude that motivates the entire team.',
+
+            'recommendation.erika.name': 'Erika Musterfrau',
+            'recommendation.erika.role': 'Senior Developer at Web Innovations',
+            'recommendation.erika.text':
+                'Johannes is an exceptional developer. Their knowledge of modern web technologies and commitment to clean, maintainable code is remarkable. They are always ready to share their knowledge and help others, making them a valuable team player.',
+
+            'recommendation.john.name': 'John Doe',
+            'recommendation.john.role': 'CTO at Creative Apps',
+            'recommendation.john.text':
+                'Working with Johannes was a great experience. Their ability to quickly learn new technologies and use them effectively has significantly advanced our project. They are detail-oriented and always strive to achieve the best possible results.',
+
             // Contact Section
             'contact.title': 'Contact',
             'contact.problem': 'Got a problem to solve?',
@@ -214,6 +242,34 @@ export class TranslationService {
             'portfolio.title': 'Portfolio',
             'portfolio.description':
                 'Hier finden Sie einige meiner neuesten Arbeiten und Projekte.',
+
+            // Project Descriptions
+            'project.join.description':
+                'Eine Task-Management-App, die Teams dabei hilft, Projekte zu organisieren und zu verfolgen. Mit Drag & Drop, Benutzerrollen und Real-Time Updates.',
+            'project.polloLoco.description':
+                'Ein 2D Jump & Run Spiel mit HTML5 Canvas. Sammle Münzen, besiege Gegner und erreiche das Ziel in diesem unterhaltsamen Browser-Spiel.',
+            'project.pokedex.description':
+                'Eine interaktive Pokédex-Anwendung, die die PokéAPI nutzt. Durchsuche, filtere und erkunde alle Pokémon mit detaillierten Informationen.',
+            'project.daBubble.description':
+                'Eine moderne Chat-Anwendung für Teams. Mit Channels, Direct Messages, File Sharing und einer intuitiven Benutzeroberfläche.',
+            'project.portfolio.description':
+                'Meine persönliche Portfolio-Website, die Sie gerade besuchen. Responsive Design, moderne Animationen und optimale Performance.',
+
+            // Recommendations Section
+            'recommendation.max.name': 'Max Mustermann',
+            'recommendation.max.role': 'Projektmanager bei Tech Solutions',
+            'recommendation.max.text':
+                'Ich hatte das Vergnügen, mit Johannes an mehreren Projekten zu arbeiten. Ihre Fähigkeit, komplexe Probleme zu lösen und innovative Lösungen zu finden, ist beeindruckend. Sie bringt nicht nur technisches Know-how mit, sondern auch eine positive Einstellung, die das gesamte Team motiviert.',
+
+            'recommendation.erika.name': 'Erika Musterfrau',
+            'recommendation.erika.role': 'Senior Developer bei Web Innovations',
+            'recommendation.erika.text':
+                'Johannes ist eine außergewöhnliche Entwicklerin. Ihre Kenntnisse in modernen Webtechnologien und ihr Engagement für sauberen, wartbaren Code sind bemerkenswert. Sie ist immer bereit, ihr Wissen zu teilen und anderen zu helfen, was sie zu einer wertvollen Teamplayerin macht.',
+
+            'recommendation.john.name': 'John Doe',
+            'recommendation.john.role': 'CTO bei Creative Apps',
+            'recommendation.john.text':
+                'Die Zusammenarbeit mit Johannes war eine großartige Erfahrung. Ihre Fähigkeit, sich schnell in neue Technologien einzuarbeiten und diese effektiv einzusetzen, hat unser Projekt maßgeblich vorangebracht. Sie ist detailorientiert und stets bestrebt, die bestmöglichen Ergebnisse zu erzielen.',
 
             // Contact Section
             'contact.title': 'Kontakt',

@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
+
+interface Recommendation {
+    nameKey: string;
+    roleKey: string;
+    textKey: string;
+    image: string;
+}
 
 @Component({
     selector: 'app-recommendation',
@@ -9,32 +17,51 @@ import { Component } from '@angular/core';
 })
 export class RecommendationComponent {
     currentIndex: number = 0;
-    recommendations: { name: string; role: string; text: string; image: string }[] = [
+
+    constructor(private translationService: TranslationService) {}
+
+    recommendations: Recommendation[] = [
         {
-            name: 'Max Mustermann',
-            role: 'Projektmanager bei Tech Solutions',
-            text: 'Ich hatte das Vergnügen, mit Johannes an mehreren Projekten zu arbeiten. Ihre Fähigkeit, komplexe Probleme zu lösen und innovative Lösungen zu finden, ist beeindruckend. Sie bringt nicht nur technisches Know-how mit, sondern auch eine positive Einstellung, die das gesamte Team motiviert.',
-            image: 'assets/images/max-mustermann.jpg',
+            nameKey: 'recommendation.max.name',
+            roleKey: 'recommendation.max.role',
+            textKey: 'recommendation.max.text',
+            image: '',
         },
         {
-            name: 'Erika Musterfrau',
-            role: 'Senior Developer bei Web Innovations',
-            text: 'Johannes ist eine außergewöhnliche Entwicklerin. Ihre Kenntnisse in modernen Webtechnologien und ihr Engagement für sauberen, wartbaren Code sind bemerkenswert. Sie ist immer bereit, ihr Wissen zu teilen und anderen zu helfen, was sie zu einer wertvollen Teamplayerin macht.',
-            image: 'assets/images/erika-musterfrau.jpg',
+            nameKey: 'recommendation.erika.name',
+            roleKey: 'recommendation.erika.role',
+            textKey: 'recommendation.erika.text',
+            image: '',
         },
         {
-            name: 'John Doe',
-            role: 'CTO bei Creative Apps',
-            text: 'Die Zusammenarbeit mit Johannes war eine großartige Erfahrung. Ihre Fähigkeit, sich schnell in neue Technologien einzuarbeiten und diese effektiv einzusetzen, hat unser Projekt maßgeblich vorangebracht. Sie ist detailorientiert und stets bestrebt, die bestmöglichen Ergebnisse zu erzielen.',
-            image: 'assets/images/john-doe.jpg',
+            nameKey: 'recommendation.john.name',
+            roleKey: 'recommendation.john.role',
+            textKey: 'recommendation.john.text',
+            image: '',
         },
     ];
 
+    // Methods to get translated content
+    getRecommendationName(nameKey: string): string {
+        return this.translationService.translate(nameKey);
+    }
+
+    getRecommendationRole(roleKey: string): string {
+        return this.translationService.translate(roleKey);
+    }
+
+    getRecommendationText(textKey: string): string {
+        return this.translationService.translate(textKey);
+    }
+
     previousRecommendation() {
-        this.currentIndex = (this.currentIndex - 1 + this.recommendations.length) % this.recommendations.length;
+        this.currentIndex =
+            (this.currentIndex - 1 + this.recommendations.length) %
+            this.recommendations.length;
     }
 
     nextRecommendation() {
-        this.currentIndex = (this.currentIndex + 1) % this.recommendations.length;
+        this.currentIndex =
+            (this.currentIndex + 1) % this.recommendations.length;
     }
 }

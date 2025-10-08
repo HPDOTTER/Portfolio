@@ -5,16 +5,41 @@
                 <span class="double-quotes"></span>
                 <div>
                     <p>
-                        {{ recommendations[currentIndex].text }}
+                        {{
+                            getRecommendationText(
+                                recommendations[currentIndex].textKey
+                            )
+                        }}
                     </p>
                 </div>
                 <div class="person-container">
                     <span class="purple-line"></span>
-                    <div><p>{{ recommendations[currentIndex].name }} - {{ recommendations[currentIndex].role }}</p></div>
+                    <div>
+                        <p>
+                            {{
+                                getRecommendationName(
+                                    recommendations[currentIndex].nameKey
+                                )
+                            }}
+                            -
+                            {{
+                                getRecommendationRole(
+                                    recommendations[currentIndex].roleKey
+                                )
+                            }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="picture-container">
-                <img [src]="recommendations[currentIndex].image" alt="{{ recommendations[currentIndex].name }}" />
+                <img
+                    [src]="recommendations[currentIndex].image"
+                    [alt]="
+                        getRecommendationName(
+                            recommendations[currentIndex].nameKey
+                        )
+                    "
+                />
                 <span class="purple-vector-container">
                     <span class="purple-vector"></span>
                 </span>
@@ -22,11 +47,43 @@
             <span class="green-shade"></span>
         </div>
         <div class="recommendation-selection">
-            <img (click)="previousRecommendation()" src="../../assets/icons/arrow-green.png" class="recommendation-arrow" alt=""/>
-            <img [src]="currentIndex === 0 ? '../../assets/icons/dot-green.png' : '../../assets/icons/dot-purple.png'" alt="" />
-            <img [src]="currentIndex === 1 ? '../../assets/icons/dot-green.png' : '../../assets/icons/dot-purple.png'" alt="" />
-            <img [src]="currentIndex === 2 ? '../../assets/icons/dot-green.png' : '../../assets/icons/dot-purple.png'" alt="" />
-            <img (click)="nextRecommendation()" src="../../assets/icons/arrow-green.png" class="recommendation-arrow" alt="" style="transform: rotate(180deg)"/>
+            <img
+                (click)="previousRecommendation()"
+                src="../../assets/icons/arrow-green.png"
+                class="recommendation-arrow"
+                alt=""
+            />
+            <img
+                [src]="
+                    currentIndex === 0
+                        ? '../../assets/icons/dot-green.png'
+                        : '../../assets/icons/dot-purple.png'
+                "
+                alt=""
+            />
+            <img
+                [src]="
+                    currentIndex === 1
+                        ? '../../assets/icons/dot-green.png'
+                        : '../../assets/icons/dot-purple.png'
+                "
+                alt=""
+            />
+            <img
+                [src]="
+                    currentIndex === 2
+                        ? '../../assets/icons/dot-green.png'
+                        : '../../assets/icons/dot-purple.png'
+                "
+                alt=""
+            />
+            <img
+                (click)="nextRecommendation()"
+                src="../../assets/icons/arrow-green.png"
+                class="recommendation-arrow"
+                alt=""
+                style="transform: rotate(180deg)"
+            />
         </div>
     </section>
 </main>

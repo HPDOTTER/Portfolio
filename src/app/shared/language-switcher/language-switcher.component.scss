@@ -31,3 +31,17 @@
         }
     }
 }
+
+.language-switcher-mobile {
+    display: none;
+}
+
+@media (max-width: 880px) {
+    .language-switcher-mobile {
+        display: block;
+    }
+
+    .language-switcher {
+        display: none;
+    }
+}

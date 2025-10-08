@@ -70,3 +70,75 @@ img {
     justify-content: left;
     gap: 30px;
 }
+
+// Mobile styles
+.burger-menu {
+    display: none;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+        height: 30px;
+    }
+}
+
+.logo-small {
+    display: none;
+    height: 40px;
+}
+
+.mobile-overlay {
+    min-height: 100svh;
+    max-height: 100svh;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.mobile-header-links {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1060px) {
+    .logo-big {
+        height: 35px;
+    }
+}
+
+@media (max-width: 880px) {
+    .logo-big {
+        display: none;
+    }
+    .logo-small {
+        display: block;
+    }
+    .navigation {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+    }
+    .header-content {
+        width: 80%;
+    }
+}
