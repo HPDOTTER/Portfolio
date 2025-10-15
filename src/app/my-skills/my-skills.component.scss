@@ -18,8 +18,8 @@ main {
     z-index: 2;
 
     img {
-        height: 100px;
-        width: auto;
+        height: 95px;
+        width: 110px;
         padding: 0px 15px;
         box-sizing: border-box;
     }
@@ -80,4 +80,57 @@ h2 {
     z-index: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.skills-icons-mobile {
+    display: none;
+}
+
+@media (max-width: 1320px) {
+    .skills-icons {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        margin-bottom: 80px;
+
+        section {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            gap: 80px;
+            
+        }
+
+        .skills-text {
+            width: 100%;
+            align-items: end;
+            text-align: end;
+            gap: 24px;
+
+            .button-span{
+                margin-top: 40px;
+            }
+        }
+
+        .skills-icons {
+            display: none;
+        }
+
+        .skills-icons-mobile {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 40px 0px;
+
+            img {
+                height: 100px;
+                width: 85px;
+            }
+        }
+    }
 }

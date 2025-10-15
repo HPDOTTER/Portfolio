@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 main {
     display: flex;
@@ -8,9 +8,10 @@ main {
     width: 100%;
     background-image: url("../../assets/img/hero-background.png"),
         url("../../assets/img/hero-shadow.png");
-    background-position: 0% -20%, 15% 10%;
-    background-size: 100%, 40%;
+    background-position: 0% 0%, 15% 25%;
+    background-size: 120%, 40%;
     background-repeat: no-repeat;
+    background-origin: 50% 50%;
 }
 
 .hero {
@@ -23,6 +24,7 @@ main {
 
 .introduction {
     position: absolute;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -36,12 +38,15 @@ main {
     position: absolute;
     align-items: center;
     bottom: -70px;
+    right: 35%;
 }
 
 .headerbox {
     display: flex;
+    position: relative;
     flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    justify-content: end;
     height: 120px;
 }
 
@@ -61,6 +66,7 @@ main {
 .header-item {
     display: inline-block;
     text-align: center;
+    position: relative;
 
     h1 {
         font-weight: 900;
@@ -76,7 +82,7 @@ main {
 }
 
 .scroll-down {
-    rotate: 90deg; 
+    rotate: 90deg;
     transform-origin: bottom right;
     position: absolute;
     right: 25px;
@@ -98,7 +104,7 @@ main {
         font-size: 20px;
 
         &:hover {
-        color: $green;
+            color: $green;
         }
     }
 
@@ -122,7 +128,7 @@ main {
         transition: transform 0.125s ease-in-out;
 
         &:hover {
-        transform: scale(1.35);
+            transform: scale(1.35);
         }
     }
 }
@@ -143,4 +149,84 @@ main {
     right: -50%;
     bottom: -80%;
     z-index: -1;
+}
+
+@media (max-width: 1200px) {
+    main {
+        background-size: 160%, 40%;
+    }
+
+    .hero {
+        h1,
+        h2 {
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 33px;
+        }
+    }
+
+    .green-button {
+        bottom: -60px;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero {
+        section {
+            position: static;
+        }
+        .scroll-down {
+            display: none;
+        }
+        .introduction {
+            align-items: center;
+            position: absolute;
+            bottom: -10%;
+        }
+        .headerbox {
+            justify-content: center;
+            align-items: center;
+
+            .rotate-header-item {
+                transform: translateY(-60%) translateX(10%);
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        background-size: 200%, 40%;
+    }
+
+    .email-link {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        background-size: 250%, 40%;
+    }
+
+    .hero {
+        h1,
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        .green-button {
+            bottom: -50px;
+        }
+
+        .social-links {
+            left: -50px;
+        }
+    }
 }

@@ -2,7 +2,7 @@
 
 main {
     flex-direction: row;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     padding-top: 100px;
 }
 
@@ -93,4 +93,22 @@ section {
     height: auto;
     z-index: 2;
     overflow-x: hidden;
+}
+
+@media (max-width: 850px) {
+    .dev-picture {
+        display: none;
+    }
+
+    .about-me {
+        width: 100%;
+        padding: 0 20px;
+        text-align: start;
+        align-items: center;
+    }
+
+    main {
+    margin-bottom: 80px;
+    padding-top: 0px;
+    }
 }

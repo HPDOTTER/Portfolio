@@ -16,7 +16,6 @@ $content-width: 1920px;
     box-sizing: border-box;
 }
 
-
 body {
     position: relative;
     background-color: $background;
@@ -61,4 +60,38 @@ section {
 h1 {
     font-size: 90px;
     font-weight: 700;
+}
+
+@media (max-width: 1550px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .green-button {
+        a {
+            font-size: 18px;
+            padding: 12px 24px;
+        }
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .green-button {
+        a {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    }
 }
