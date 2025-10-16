@@ -16,6 +16,10 @@ $content-width: 1920px;
     box-sizing: border-box;
 }
 
+main {
+    overflow: hidden;
+}
+
 body {
     position: relative;
     background-color: $background;

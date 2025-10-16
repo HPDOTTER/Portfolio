@@ -2,7 +2,7 @@
 
 main {
     padding-top: 100px;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -253,4 +253,10 @@ form {
     z-index: -1;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+@media (max-width: 850px) {
+    .form-section{
+    flex-direction: column;
+}
 }

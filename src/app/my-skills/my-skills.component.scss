@@ -2,7 +2,7 @@
 
 main {
     padding-top: 100px;
-    margin-bottom: 150px;
+    padding-bottom: 150px;
     position: relative;
 }
 
@@ -72,12 +72,12 @@ h2 {
 
 .background-shade {
     content: url(../../assets/img/green-shadow-portfolio.png);
-    position: absolute;
-    left: -20%;
-    bottom: -120%;
+    position: relative;
+    left: -70%;
+    bottom: 50%;
     width: 35%;
     height: auto;
-    z-index: 0;
+    z-index: -1;
     overflow-x: hidden;
     overflow-y: hidden;
 }

@@ -55,10 +55,12 @@ section {
 }
 
 .footer-center {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 23px;
+    white-space: nowrap;
 }
 
 .footer-right {
@@ -74,5 +76,51 @@ section {
         &:hover {
             transform: scale(1.35);
         }
+    }
+}
+
+.legal-notice-mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .footer-center p {
+        font-size: 18px;
+    }
+
+    .footer-left {
+        img {
+            height: 35px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        height: 300px;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 60px 0px;
+    }
+
+    .footer-left {
+        align-items: center;
+
+        .footer-link {
+            display: none;
+        }
+    }
+
+    .footer-right {
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .legal-notice-mobile {
+        display: flex;
     }
 }
