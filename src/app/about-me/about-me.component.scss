@@ -2,7 +2,7 @@
 
 main {
     flex-direction: row;
-    margin-bottom: 120px;
+    padding-bottom: 120px;
     padding-top: 100px;
 }
 
@@ -88,16 +88,38 @@ section {
     content: url('../../assets/img/about-me-shadow.png');
     position: absolute;
     right: -20%;
-    top: 85%;
-    width: 40%;
+    top: -20%;
+    width: 30%;
     height: auto;
-    z-index: 2;
+    z-index: -1;
     overflow-x: hidden;
+}
+
+.background-shade-two {
+    display: none;
+    content: url('../../assets/img/about-me-shadow.png');
+    position: absolute;
+    right: -34%;
+    top: 20%;
+    width: 50%;
+    height: auto;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+    .background-shade {
+        top: 0%;
+    }
 }
 
 @media (max-width: 850px) {
     .dev-picture {
         display: none;
+    }
+
+    .background-shade-two {
+        display: block;
     }
 
     .about-me {
@@ -108,7 +130,6 @@ section {
     }
 
     main {
-    margin-bottom: 80px;
     padding-top: 0px;
     }
 }

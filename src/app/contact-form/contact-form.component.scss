@@ -26,7 +26,7 @@ section {
     width: 1800px;
     left: 0px;
     height: 4px;
-    background-color: #9747FF;
+    background-color: #9747ff;
 }
 
 main {
@@ -255,8 +255,20 @@ form {
     overflow-y: hidden;
 }
 
-@media (max-width: 850px) {
-    .form-section{
-    flex-direction: column;
+@media (max-width: 1300px) {
+    .background-shade {
+        width: 45%;
+        bottom: -350%;
+    }
 }
+
+@media (max-width: 850px) {
+    .form-section {
+        flex-direction: column;
+    }
+
+    .background-shade {
+        width: 45%;
+        bottom: -200%;
+    }
 }

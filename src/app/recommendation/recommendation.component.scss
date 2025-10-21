@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 main {
-    margin: 150px 0px;
+    padding: 150px 0px;
     position: relative;
 }
 
@@ -62,7 +62,7 @@ section {
 .green-shade {
     content: url("../../assets/img/green-shadow-portfolio.png");
     position: absolute;
-    width: 700px;
+    width: 35%;
     height: auto;
     right: -20%;
     bottom: 20%;
@@ -124,6 +124,12 @@ section {
         flex-direction: column-reverse;
         align-items: center;
         gap: 40px;
+    }
+
+    .green-shade {
+        width: 40%;
+        right: -25%;
+        top: 10%;
     }
 
     .recommendation {

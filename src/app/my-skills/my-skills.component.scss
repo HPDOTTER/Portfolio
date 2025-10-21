@@ -72,14 +72,12 @@ h2 {
 
 .background-shade {
     content: url(../../assets/img/green-shadow-portfolio.png);
-    position: relative;
-    left: -70%;
-    bottom: 50%;
-    width: 35%;
+    position: absolute;
+    left: -30%;
+    bottom: -50%;
+    width: 45%;
     height: auto;
     z-index: -1;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .skills-icons-mobile {
@@ -92,9 +90,14 @@ h2 {
     }
 }
 
+@media (max-width: 1200px) {
+    .background-shade {
+        bottom: -30%;
+    }
+}
+
 @media (max-width: 900px) {
     main {
-        margin-bottom: 80px;
 
         section {
             flex-direction: column-reverse;
@@ -117,6 +120,12 @@ h2 {
 
         .skills-icons {
             display: none;
+        }
+
+        .background-shade {
+            left: -20%;
+            bottom: 0%;
+            width: 60%;
         }
 
         .skills-icons-mobile {
