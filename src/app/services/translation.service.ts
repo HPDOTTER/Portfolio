@@ -220,9 +220,9 @@ export class TranslationService {
             // About Section
             'about.title': 'Über mich',
             'about.description':
-                'Ich bin ein leidenschaftlicher Webentwickler mit einem Händchen für die Erstellung dynamischer und responsiver Webanwendungen. Meine Reise in der Technik begann mit der Neugier darauf, wie Dinge funktionieren, und hat sich zu einer vollwertigen Karriere entwickelt, in der ich echte Probleme durch Code lösen kann.',
+                'Meine Leidenschaft für das Programmieren entstand aus meiner Neugier für die rasante technische Entwicklung in der IT. Schon seit meiner Jugend verbringe ich viel Zeit am Computer. Im Rahmen meiner beruflichen Neuorientierung war die Softwareentwicklung daher wie ein „gefundenes Fressen“ für mich. Seitdem bilde ich mich berufsbegleitend bei der Developer Akademie im Programmieren weiter und setze aktuell meine ersten eigenen Projekte um.',
             'about.location':
-                'Wo befinden Sie sich? Sind Sie offen für verschiedene Arbeitsweisen, wie z.B. Remote-Arbeit oder sogar Umzug?',
+                'Ich wohne in Raisting im Alpenvorland in Bayern. Vorzugsweise arbeite ich von Zuhause aus, jedoch bin ich bereit für die Einarbeitung vor Ort zu arbeiten.',
             'about.inspiration':
                 'Was inspiriert Ihre Arbeit? Gibt es bestimmte Technologien oder Methoden, für die Sie sich begeistern?',
             'about.approach':

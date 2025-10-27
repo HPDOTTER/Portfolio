@@ -25,19 +25,19 @@ export class RecommendationComponent {
             nameKey: 'recommendation.max.name',
             roleKey: 'recommendation.max.role',
             textKey: 'recommendation.max.text',
-            image: '',
+            image: './assets/img/foto-frontal.png',
         },
         {
             nameKey: 'recommendation.erika.name',
             roleKey: 'recommendation.erika.role',
             textKey: 'recommendation.erika.text',
-            image: '',
+            image: './assets/img/foto-transparent.png',
         },
         {
             nameKey: 'recommendation.john.name',
             roleKey: 'recommendation.john.role',
             textKey: 'recommendation.john.text',
-            image: '',
+            image: './assets/img/foto-frontal.png',
         },
     ];
 

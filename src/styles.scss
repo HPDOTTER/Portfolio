@@ -1,8 +1,8 @@
-$background: #141D2F;
-$purple: #9747FF;
+$background: #141d2f;
+$purple: #9747ff;
 $green: #70e61c;
-$white: #FFFFFF;
-$disabled: #B6B6B6;
+$white: #ffffff;
+$disabled: #b6b6b6;
 
 $content-width: 1920px;
 
@@ -10,10 +10,27 @@ $content-width: 1920px;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: $white;
     scroll-behavior: smooth;
     box-sizing: border-box;
+}
+
+button,
+a,
+img {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid $purple;
+    outline-offset: 3px;
 }
 
 main {
@@ -58,7 +75,6 @@ section {
         }
     }
 }
-
 
 h1 {
     font-size: 90px;

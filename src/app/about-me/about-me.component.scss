@@ -59,6 +59,7 @@ section {
         width: 400px;
         border: 3px solid $green;
         border-radius: 50%;
+        object-fit: cover;
     }
 }
 
@@ -78,7 +79,7 @@ section {
 
 .vector {
     position: absolute;
-    width: 1555px;
+    width: 2555px;
     left: 0;
     height: 4px;
     background-color: $green;

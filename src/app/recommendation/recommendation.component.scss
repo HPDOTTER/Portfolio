@@ -83,6 +83,7 @@ section {
         height: 100%;
         border-radius: 50%;
         border: 4px solid $purple;
+        object-fit: cover;
     }
 }
 
@@ -95,7 +96,7 @@ section {
 
 .purple-vector {
     position: absolute;
-    width: 800px;
+    width: 2800px;
     top: 50%;
     bottom: 50%;
     left: 0px;
@@ -147,5 +148,28 @@ section {
         p{
             white-space: normal;
         }
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .green-shade {
+        bottom: 0%;
+        width: 30%;
+    }
+}
+
+@media (min-width: 2600px) {
+    .green-shade {
+        width: 25%;
+        right: -10%;
+    }
+}
+
+@media (min-width: 3000px) {
+    .green-shade {
+        width: 15%;
+        right: -5%;
+        bottom: 5%;
     }
 }
