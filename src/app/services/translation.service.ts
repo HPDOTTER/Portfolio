@@ -32,22 +32,18 @@ export class TranslationService {
             // About Section
             'about.title': 'About me',
             'about.description':
-                "I'm a passionate web developer with a knack for creating dynamic and responsive web applications. My journey in tech started with a curiosity for how things work, and it has evolved into a full-fledged career where I get to solve real-world problems through code.",
+                'My passion for programming arose from my curiosity about the rapid technological development in IT. I have been spending a lot of time on computers since my youth. As part of my career reorientation, software development was therefore like a "godsend" for me. Since then, I have been continuing my education in programming at the Developer Academy alongside my job and am currently implementing my first own projects.',
             'about.location':
-                'Where are you located? Are you open to different ways of working, such as working remotely or even relocating?',
+                'I live in Raisting in the Alpine foothills of Bavaria. I prefer to work from home, but I am willing to work on-site for training purposes.',
             'about.inspiration':
-                'What inspires your work? Are there any particular technologies or methodologies that you are passionate about?',
+                'I am particularly fascinated by the automation of processes, a topic that is becoming increasingly important in our time. Since I started programming, I have been working privately on an automated ventilation control system for the old building I live in.',
             'about.approach':
-                'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration.',
+                'It gives me great pleasure to analyze processes and find ways to make them more efficient and simpler. I combine analytical thinking with creativity to develop a suitable and elegant solution for every problem. I see challenges as an opportunity to learn new things and further develop my skills. Through perseverance and collaboration with your team, I see us as a rising star in the tech industry.',
 
             // Skills Section
             'skills.title': 'My Skills',
-            'skills.description':
-                'Show that you have used a variety of front-end technologies in your projects',
             'skills.looking': 'Looking for',
             'skills.another': 'another skill?',
-            'skills.enthusiasm':
-                'Reveal enthusiasm for learning new technologies and frameworks',
             'skills.getInTouch': 'Get in touch',
 
             // Portfolio Section
