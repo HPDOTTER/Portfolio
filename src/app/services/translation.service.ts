@@ -224,18 +224,14 @@ export class TranslationService {
             'about.location':
                 'Ich wohne in Raisting im Alpenvorland in Bayern. Vorzugsweise arbeite ich von Zuhause aus, jedoch bin ich bereit für die Einarbeitung vor Ort zu arbeiten.',
             'about.inspiration':
-                'Was inspiriert Ihre Arbeit? Gibt es bestimmte Technologien oder Methoden, für die Sie sich begeistern?',
+                'Mich fasziniert besonders die Automatisierung von Abläufen, ein Thema, das in unserer heutigen Zeit immer wichtiger wird. Seit ich mit dem Programmieren begonnen habe, arbeite ich privat an einer automatisierten Lüftungssteuerung für den Altbau, in dem ich wohne.',
             'about.approach':
-                'Eine kurze Beschreibung Ihres Problemlösungsansatzes. Lernen Sie aus jeder Herausforderung, während Sie nach der effizientesten oder elegantesten Lösung suchen? Sie können einige Schlüsselwörter wie: analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit einschließen.',
+                'Es bereitet mir große Freude, Prozesse zu analysieren und Wege zu finden, sie effizienter und einfacher zu gestalten. Dabei kombiniere ich analytisches Denken mit Kreativität, um für jedes Problem eine passende und elegante Lösung zu entwickeln. Herausforderungen sehe ich als Chance, Neues zu lernen und meine Fähigkeiten weiterzuentwickeln. Durch Ausdauer und Zusammenarbeit mit ihrem Team, sehe ich uns als aufgehender Stern in der Tech-Branche.',
 
             // Skills Section
             'skills.title': 'Meine Fähigkeiten',
-            'skills.description':
-                'Zeigen Sie, dass Sie eine Vielzahl von Frontend-Technologien in Ihren Projekten verwendet haben',
             'skills.looking': 'Suchen Sie nach',
             'skills.another': 'einer anderen Fähigkeit?',
-            'skills.enthusiasm':
-                'Zeigen Sie Begeisterung für das Erlernen neuer Technologien und Frameworks',
             'skills.getInTouch': 'Kontakt aufnehmen',
 
             // Portfolio Section

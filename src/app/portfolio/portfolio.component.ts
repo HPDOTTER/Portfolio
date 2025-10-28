@@ -28,7 +28,7 @@ export class PortfolioComponent {
             title: 'Join Task Manager',
             descriptionKey: 'project.join.description',
             image: './assets/img/join-example.png',
-            technologies: ['Angular', 'TypeScript', 'Firebase', 'HTML', 'SCSS'],
+            technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
             githubLink: 'https://github.com/username/join',
             liveLink: 'https://join-app.example.com',
         },

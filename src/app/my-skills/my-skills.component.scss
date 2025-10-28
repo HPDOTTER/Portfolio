@@ -28,8 +28,10 @@ main {
 .skills-text {
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    justify-content: start;
+    gap: 80px;
     width: 50%;
+    height: inherit;
     text-align: end;
     align-items: flex-end;
 }
