@@ -45,6 +45,7 @@ export class TranslationService {
             'skills.looking': 'Looking for',
             'skills.another': 'another skill?',
             'skills.getInTouch': 'Get in touch',
+            'skills.learning': 'I have a special interest in learning',
 
             // Portfolio Section
             'portfolio.title': 'Portfolio',
@@ -229,6 +230,7 @@ export class TranslationService {
             'skills.looking': 'Suchen Sie nach',
             'skills.another': 'einer anderen Fähigkeit?',
             'skills.getInTouch': 'Kontakt aufnehmen',
+            'skills.learning': 'Ich habe ein besonderes Interesse am Lernen von',
 
             // Portfolio Section
             'portfolio.title': 'Portfolio',

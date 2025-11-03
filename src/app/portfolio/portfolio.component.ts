@@ -30,7 +30,7 @@ export class PortfolioComponent {
             image: './assets/img/join-example.png',
             technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
             githubLink: 'https://github.com/username/join',
-            liveLink: 'https://join-app.example.com',
+            liveLink: 'https://join-394.developerakademie.net/html/login.html',
         },
         {
             title: 'El Pollo Loco Game',
@@ -38,12 +38,12 @@ export class PortfolioComponent {
             image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://github.com/username/el-pollo-loco',
-            liveLink: 'https://el-pollo-loco.example.com',
+            liveLink: 'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
         },
         {
             title: 'Pokédex',
             descriptionKey: 'project.pokedex.description',
-            image: './assets/img/join-example.png',
+            image: './assets/img/pokedex-example.png',
             technologies: [
                 'JavaScript',
                 'REST API',
@@ -52,7 +52,7 @@ export class PortfolioComponent {
                 'Bootstrap',
             ],
             githubLink: 'https://github.com/username/pokedex',
-            liveLink: 'https://pokedex.example.com',
+            liveLink: 'https://johannes-nordmann.developerakademie.net/Pokedex/index.html',
         },
         {
             title: 'DA Bubble Chat',
@@ -73,7 +73,7 @@ export class PortfolioComponent {
             descriptionKey: 'project.portfolio.description',
             image: './assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
-            githubLink: 'https://github.com/username/portfolio',
+            githubLink: 'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
             liveLink: 'https://portfolio.example.com',
         },
     ];
