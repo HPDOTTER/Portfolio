@@ -29,7 +29,7 @@ export class PortfolioComponent {
             descriptionKey: 'project.join.description',
             image: './assets/img/join-example.png',
             technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-            githubLink: 'https://github.com/username/join',
+            githubLink: 'https://github.com/HPDOTTER/Join',
             liveLink: 'https://join-394.developerakademie.net/html/login.html',
         },
         {
@@ -37,7 +37,7 @@ export class PortfolioComponent {
             descriptionKey: 'project.polloLoco.description',
             image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
-            githubLink: 'https://github.com/username/el-pollo-loco',
+            githubLink: 'https://github.com/HPDOTTER/El-Pollo-Loco',
             liveLink: 'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
         },
         {
@@ -51,7 +51,7 @@ export class PortfolioComponent {
                 'CSS',
                 'Bootstrap',
             ],
-            githubLink: 'https://github.com/username/pokedex',
+            githubLink: 'https://github.com/HPDOTTER/Pokedex',
             liveLink: 'https://johannes-nordmann.developerakademie.net/Pokedex/index.html',
         },
         {
@@ -73,8 +73,8 @@ export class PortfolioComponent {
             descriptionKey: 'project.portfolio.description',
             image: './assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
-            githubLink: 'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
-            liveLink: 'https://portfolio.example.com',
+            githubLink: 'https://github.com/HPDOTTER/Portfolio',
+            liveLink: 'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
         },
     ];
 
