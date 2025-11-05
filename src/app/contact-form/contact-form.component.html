@@ -38,13 +38,15 @@
                     <span
                         class="icon"
                         *ngIf="name.valid && name.touched"
-                        style="
-                            content: url(./assets/icons/green-checkmark.png);
-                        "
+                        style="content: url(./assets/icons/green-checkmark.png)"
                     ></span>
                 </div>
-                <div *ngIf="!name.valid && name.touched">
-                    <p style="color: red; margin-bottom: 10px">
+                <div
+                    [style.visibility]="
+                        !name.valid && name.touched ? 'visible' : 'hidden'
+                    "
+                >
+                    <p style="color: red; margin-bottom: 7px">
                         {{ "contact.error.name" | translate }}
                     </p>
                 </div>
@@ -71,23 +73,17 @@
                     <span
                         class="icon"
                         *ngIf="email.valid && email.touched"
-                        style="
-                            content: url(./assets/icons/green-checkmark.png);
-                        "
+                        style="content: url(./assets/icons/green-checkmark.png)"
                     ></span>
                 </div>
-                <div *ngIf="!email.valid && email.touched">
-                    <p
-                        *ngIf="email.errors?.['required']"
-                        style="color: red; margin-bottom: 10px"
-                    >
-                        {{ "contact.error.email" | translate }}
-                    </p>
-                    <p
-                        *ngIf="email.errors?.['pattern']"
-                        style="color: red; margin-bottom: 10px"
-                    >
-                        {{ "contact.error.emailPattern" | translate }}
+                <div
+                    [style.visibility]="
+                        !email.valid && email.touched ? 'visible' : 'hidden'
+                    "
+                >
+                    <p style="color: red; margin-bottom: 7px">
+                        {{ email.errors?.['required'] ? ('contact.error.email' | translate) : 
+                        email.errors?.['pattern'] ? ('contact.error.emailPattern' | translate) : 'spaceholder' }}
                     </p>
                 </div>
                 <label for="message"></label>
@@ -116,13 +112,15 @@
                     <span
                         class="icon"
                         *ngIf="message.valid && message.touched"
-                        style="
-                            content: url(./assets/icons/green-checkmark.png);
-                        "
+                        style="content: url(./assets/icons/green-checkmark.png)"
                     ></span>
                 </div>
-                <div *ngIf="!message.valid && message.touched">
-                    <p style="color: red; margin-bottom: 10px">
+                <div
+                    [style.visibility]="
+                        !message.valid && message.touched ? 'visible' : 'hidden'
+                    "
+                >
+                    <p style="color: red; margin-bottom: 7px">
                         {{ "contact.error.message" | translate }}
                     </p>
                 </div>
