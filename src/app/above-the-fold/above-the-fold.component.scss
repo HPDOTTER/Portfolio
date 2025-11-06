@@ -10,7 +10,6 @@ main {
     background-image: url("../../assets/img/background-2.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-origin: 50% 50%;
 }
 
 .hero {
@@ -246,12 +245,5 @@ main {
 @media (max-width: 400px) {
     main {
         background-position: 20% 10%;
-    }
-}
-
-@media (min-width: 2500px) {
-    main {
-        background-position: 0% 0%, 38% 15%, 40% 25%;
-        background-size: 120%, 30%, 40%;
     }
 }
