@@ -6,7 +6,7 @@ import { TranslationService } from '../services/translation.service';
 
 interface Project {
     title: string;
-    descriptionKey: string; // Changed to store translation key instead of direct text
+    descriptionKey: string;
     image: string;
     technologies: string[];
     githubLink: string;
@@ -38,7 +38,8 @@ export class PortfolioComponent {
             image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://github.com/HPDOTTER/El-Pollo-Loco',
-            liveLink: 'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
+            liveLink:
+                'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
         },
         {
             title: 'Pokédex',
@@ -52,7 +53,8 @@ export class PortfolioComponent {
                 'Bootstrap',
             ],
             githubLink: 'https://github.com/HPDOTTER/Pokedex',
-            liveLink: 'https://johannes-nordmann.developerakademie.net/Pokedex/index.html',
+            liveLink:
+                'https://johannes-nordmann.developerakademie.net/Pokedex/index.html',
         },
         {
             title: 'DA Bubble Chat',
@@ -74,11 +76,11 @@ export class PortfolioComponent {
             image: './assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
             githubLink: 'https://github.com/HPDOTTER/Portfolio',
-            liveLink: 'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
+            liveLink:
+                'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
         },
     ];
 
-    // Method to get translated description
     getProjectDescription(descriptionKey: string): string {
         return this.translationService.translate(descriptionKey);
     }

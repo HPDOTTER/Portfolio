@@ -2,16 +2,59 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
+/**
+ * Interface for translation key-value pairs
+ *
+ * @interface Translation
+ * @property {string} [key: string] - Translation key mapped to translated text
+ */
 export interface Translation {
     [key: string]: string;
 }
 
+/**
+ * Service for managing internationalization and language switching.
+ *
+ * This service provides functionality for:
+ * - Managing current language state (English/German)
+ * - Storing language preference in browser localStorage
+ * - Providing translations for all UI text
+ * - SSR-safe language detection and persistence
+ *
+ * @service TranslationService
+ * @providedIn 'root'
+ *
+ * Supported Languages:
+ * - English (en) - Default language
+ * - German (de) - Secondary language
+ *
+ * @example
+ * ```typescript
+ * constructor(private translationService: TranslationService) {}
+ *
+ * // Switch language
+ * this.translationService.setLanguage('de');
+ *
+ * // Get current language
+ * const currentLang = this.translationService.getCurrentLanguage();
+ *
+ * // Subscribe to language changes
+ * this.translationService.currentLanguage$.subscribe(lang => {
+ *   console.log('Language changed to:', lang);
+ * });
+ * ```
+ */
 @Injectable({
     providedIn: 'root',
 })
 export class TranslationService {
+    /** BehaviorSubject holding the current language code */
     private currentLanguage = new BehaviorSubject<string>('en');
+
+    /** Observable stream of current language changes */
     public currentLanguage$ = this.currentLanguage.asObservable();
+
+    /** Flag indicating if running in browser (for localStorage access) */
     private isBrowser: boolean;
 
     private translations: { [lang: string]: Translation } = {
@@ -230,7 +273,8 @@ export class TranslationService {
             'skills.looking': 'Suchen Sie nach',
             'skills.another': 'einer anderen Fähigkeit?',
             'skills.getInTouch': 'Kontakt aufnehmen',
-            'skills.learning': 'Ich habe ein besonderes Interesse am Lernen von',
+            'skills.learning':
+                'Ich habe ein besonderes Interesse am Lernen von',
 
             // Portfolio Section
             'portfolio.title': 'Portfolio',
@@ -387,6 +431,15 @@ export class TranslationService {
         },
     };
 
+    /**
+     * Initializes the TranslationService with SSR support.
+     *
+     * Detects the platform (browser/server) and loads saved language
+     * preference from localStorage if available. This constructor is
+     * SSR-safe and only accesses localStorage in browser environment.
+     *
+     * @param {Object} platformId - Angular platform identifier for SSR detection
+     */
     constructor(@Inject(PLATFORM_ID) platformId: Object) {
         this.isBrowser = isPlatformBrowser(platformId);
 
@@ -399,10 +452,30 @@ export class TranslationService {
         }
     }
 
+    /**
+     * Gets the current active language code.
+     *
+     * @returns {string} Current language code ('en' or 'de')
+     */
     getCurrentLanguage(): string {
         return this.currentLanguage.value;
     }
 
+    /**
+     * Sets the active language and persists it to localStorage.
+     *
+     * Only changes language if the provided language code exists
+     * in the translations object. Saves preference to localStorage
+     * when running in browser environment.
+     *
+     * @param {string} lang - Language code to set ('en' or 'de')
+     *
+     * @example
+     * ```typescript
+     * this.translationService.setLanguage('de'); // Switch to German
+     * this.translationService.setLanguage('en'); // Switch to English
+     * ```
+     */
     setLanguage(lang: string): void {
         if (this.translations[lang]) {
             this.currentLanguage.next(lang);
@@ -413,6 +486,21 @@ export class TranslationService {
         }
     }
 
+    /**
+     * Retrieves translated text for a given key.
+     *
+     * Returns the translated text in the current language, or the key itself
+     * if no translation is found (fallback behavior).
+     *
+     * @param {string} key - Translation key (e.g., 'nav.about', 'contact.title')
+     * @returns {string} Translated text or the key if translation not found
+     *
+     * @example
+     * ```typescript
+     * const aboutText = this.translationService.translate('nav.about');
+     * // Returns: "About me" (en) or "Über mich" (de)
+     * ```
+     */
     translate(key: string): string {
         const lang = this.getCurrentLanguage();
         return this.translations[lang][key] || key;

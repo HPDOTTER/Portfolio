@@ -42,9 +42,9 @@ export class ContactFormComponent {
                         ngForm.resetForm();
                     },
                     error: (error) => {
-                        console.error(error);
+                        // Handle error silently or show user-friendly message
                     },
-                    complete: () => console.info('send post complete'),
+                    complete: () => {},
                 });
         }
     }
