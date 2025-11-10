@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
     selector: 'app-contact-form',
@@ -22,8 +23,11 @@ export class ContactFormComponent {
         privacy: false,
     };
 
+    showPopup = false;
+    popupType: 'success' | 'error' = 'success';
+
     post = {
-        endPoint: 'https://deineDomain.de/sendMail.php',
+        endPoint: '/sendMail.php',
         body: (payload: any) => JSON.stringify(payload),
         options: {
             headers: {
@@ -33,6 +37,8 @@ export class ContactFormComponent {
         },
     };
 
+    constructor(private translationService: TranslationService) {}
+
     onSubmit(ngForm: NgForm) {
         if (ngForm.submitted && ngForm.form.valid) {
             this.http
@@ -40,12 +46,26 @@ export class ContactFormComponent {
                 .subscribe({
                     next: (response) => {
                         ngForm.resetForm();
+                        this.showSuccessPopup();
                     },
                     error: (error) => {
-                        // Handle error silently or show user-friendly message
+                        this.showErrorPopup();
                     },
-                    complete: () => {},
                 });
         }
+    }
+
+    showSuccessPopup() {
+        this.popupType = 'success';
+        this.showPopup = true;
+    }
+
+    showErrorPopup() {
+        this.popupType = 'error';
+        this.showPopup = true;
+    }
+
+    closePopup() {
+        this.showPopup = false;
     }
 }

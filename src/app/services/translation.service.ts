@@ -143,6 +143,13 @@ export class TranslationService {
                 'Please enter a valid email address format',
             'contact.error.message':
                 'Please enter a message (minimum 3 characters)',
+            'contact.success.title': 'Message Sent Successfully!',
+            'contact.success.message':
+                'Thank you for your message! I will get back to you as soon as possible.',
+            'contact.success.close': 'Close',
+            'contact.error.title': 'Oops! Something went wrong',
+            'contact.error.sendMessage':
+                'There was an error sending your message. Please try again or contact me directly.',
 
             // Footer
             'footer.imprint': 'Legal Notice',
@@ -330,6 +337,13 @@ export class TranslationService {
                 'Bitte geben Sie ein gültiges E-Mail-Format ein',
             'contact.error.message':
                 'Bitte geben Sie eine Nachricht ein (mindestens 3 Zeichen)',
+            'contact.success.title': 'Nachricht erfolgreich gesendet!',
+            'contact.success.message':
+                'Vielen Dank für Ihre Nachricht! Ich werde mich so schnell wie möglich bei Ihnen melden.',
+            'contact.success.close': 'Schließen',
+            'contact.error.title': 'Oops! Etwas ist schief gelaufen',
+            'contact.error.sendMessage':
+                'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt.',
 
             // Footer
             'footer.imprint': 'Impressum',
