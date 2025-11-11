@@ -72,7 +72,7 @@ export class PortfolioComponent {
         {
             title: 'Portfolio Website',
             descriptionKey: 'project.portfolio.description',
-            image: './assets/img/join-example.png',
+            image: './assets/img/portfolio-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
             githubLink: 'https://github.com/HPDOTTER/Portfolio',
             liveLink: 'https://johannes-nordmann.de',
