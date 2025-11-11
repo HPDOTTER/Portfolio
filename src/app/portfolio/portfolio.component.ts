@@ -30,14 +30,14 @@ export class PortfolioComponent {
             image: './assets/img/join-example.png',
             technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
             githubLink: 'https://github.com/HPDOTTER/Join',
-            liveLink: 'https://join-394.developerakademie.net/html/login.html',
+            liveLink: 'https://johannes-nordmann.de/Join/',
         },
         {
             title: 'El Pollo Loco Game',
             descriptionKey: 'project.polloLoco.description',
             image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
-            githubLink: 'https://github.com/HPDOTTER/El-Pollo-Loco',
+            githubLink: 'https://johannes-nordmann.de/El-Pollo-Loco',
             liveLink:
                 'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
         },
@@ -53,8 +53,7 @@ export class PortfolioComponent {
                 'Bootstrap',
             ],
             githubLink: 'https://github.com/HPDOTTER/Pokedex',
-            liveLink:
-                'https://johannes-nordmann.developerakademie.net/Pokedex/index.html',
+            liveLink: 'https://johannes-nordmann.de/Pokedex/',
         },
         {
             title: 'DA Bubble Chat',
@@ -68,7 +67,7 @@ export class PortfolioComponent {
                 'Material UI',
             ],
             githubLink: 'https://github.com/username/da-bubble',
-            liveLink: 'https://da-bubble.example.com',
+            liveLink: 'https://johannes-nordmann.de/',
         },
         {
             title: 'Portfolio Website',
@@ -76,8 +75,7 @@ export class PortfolioComponent {
             image: './assets/img/join-example.png',
             technologies: ['Angular', 'SCSS', 'TypeScript'],
             githubLink: 'https://github.com/HPDOTTER/Portfolio',
-            liveLink:
-                'https://johannes-nordmann.developerakademie.net/angular-projects/Portfolio/dist/portfolio/browser/',
+            liveLink: 'https://johannes-nordmann.de',
         },
     ];
 
