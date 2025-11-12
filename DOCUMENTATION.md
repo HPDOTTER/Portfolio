@@ -65,19 +65,27 @@ This document provides an overview of the comprehensive documentation that has b
 
 #### 5. **contact-form.component.ts**
 
--   **Component Purpose**: User contact and inquiry form
+-   **Component Purpose**: User contact and inquiry form with popup notifications
 -   **Features Documented**:
-    -   Template-driven form validation
-    -   Real-time validation feedback
-    -   Backend email integration
-    -   Privacy policy consent
+    -   Template-driven form validation with real-time feedback
+    -   Multilingual popup notifications (success/error)
+    -   Backend email service integration
+    -   Privacy policy consent requirement
+    -   Form reset after successful submission
+    -   Responsive design with mobile optimization
 -   **Properties Documented**:
-    -   `contactData`: Form data model
-    -   `post`: HTTP configuration object
+    -   `contactData`: Form data model with all field types
+    -   `post`: HTTP configuration object for backend communication
+    -   `showPopup`: Controls popup visibility
+    -   `popupType`: Determines popup styling and content
 -   **Methods Documented**:
-    -   `onSubmit()`: Form submission and validation
--   **Validation Rules**: Field requirements and patterns
--   **Usage Examples**: Form integration and submission handling
+    -   `onSubmit()`: Form submission, validation and backend integration
+    -   `showSuccessPopup()`: Displays success notification
+    -   `showErrorPopup()`: Displays error notification
+    -   `closePopup()`: Closes notification popup
+-   **Translation Keys**: Complete list of multilingual popup messages
+-   **Validation Rules**: Comprehensive field requirements and patterns
+-   **Usage Examples**: Form integration, submission handling, and popup management
 
 #### 6. **language-switcher.component.ts**
 
