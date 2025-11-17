@@ -63,10 +63,9 @@ section {
 .purple-shade {
     content: url(../../assets/img/purple-shadow-portfolio.png);
     position: absolute;
-    width: 40%;
+    width: 30%;
     height: auto;
-    left: -20%;
-    bottom: 20%;
+    left: -10%;
     z-index: -1;
 }
 
@@ -88,5 +87,11 @@ section {
             font-size: 16px;
             padding: 0 20px;
         }
+    }
+}
+
+@media (min-width: 1600px){
+    .purple-shade {
+        width: 25%;
     }
 }

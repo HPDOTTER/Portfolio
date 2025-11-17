@@ -220,3 +220,16 @@ h2 {
         }
     }
 }
+
+@media (max-width: 500px) {
+    main {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .skills-icons-mobile {
+        justify-content: center !important;
+        align-items: center;
+    }
+}

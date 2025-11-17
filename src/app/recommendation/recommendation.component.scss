@@ -1,7 +1,8 @@
 @import "../../styles.scss";
 
 main {
-    padding: 150px 0px;
+    padding-top: 120px;
+    padding-bottom: 60px;
     position: relative;
 }
 
@@ -145,12 +146,21 @@ section {
     }
 
     .person-container {
-        p{
+        p {
             white-space: normal;
         }
     }
-}
 
+    .double-quotes {
+        left: -40px;
+        width: 70px;
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+}
 
 @media (min-width: 1400px) {
     .green-shade {

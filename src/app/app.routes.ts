@@ -9,7 +9,6 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { RecommendationComponent } from "./recommendation/recommendation.component";
 
 @Component({
     selector: 'app-home',
@@ -19,15 +18,13 @@ import { RecommendationComponent } from "./recommendation/recommendation.compone
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ContactFormComponent,
-    RecommendationComponent
+    ContactFormComponent
 ],
     template: `
         <app-above-the-fold></app-above-the-fold>
         <app-about-me></app-about-me>
         <app-my-skills></app-my-skills>
         <app-portfolio></app-portfolio>
-        <app-recommendation></app-recommendation>
         <app-contact-form></app-contact-form>
     `,
 })

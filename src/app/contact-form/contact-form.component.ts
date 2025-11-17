@@ -33,6 +33,7 @@ import { TranslationService } from '../services/translation.service';
  * - contact.error.email - Email validation error
  * - contact.error.emailPattern - Email format error
  * - contact.error.message - Message validation error
+ * - contact.error.privacy - Privacy policy acceptance error
  *
  * Form Validation Rules:
  * - Name: Required field
@@ -126,12 +127,23 @@ export class ContactFormComponent {
      * ```
      */
     onSubmit(ngForm: NgForm) {
-        if (ngForm.submitted && ngForm.form.valid) {
+        // Mark all fields as touched to show validation errors
+        Object.keys(ngForm.controls).forEach((key) => {
+            ngForm.controls[key].markAsTouched();
+        });
+
+        if (ngForm.form.valid) {
             this.http
                 .post(this.post.endPoint, this.post.body(this.contactData))
                 .subscribe({
                     next: (response) => {
                         ngForm.resetForm();
+                        this.contactData = {
+                            name: '',
+                            email: '',
+                            message: '',
+                            privacy: false,
+                        };
                         this.showSuccessPopup();
                     },
                     error: (error) => {

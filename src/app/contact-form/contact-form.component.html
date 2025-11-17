@@ -124,9 +124,9 @@
                         {{ "contact.error.message" | translate }}
                     </p>
                 </div>
-                <label class="checkbox-label" for="checkbox">
+                <label class="checkbox-label" for="privacy">
                     <input
-                        #checkbox="ngModel"
+                        #privacy="ngModel"
                         [(ngModel)]="contactData.privacy"
                         type="checkbox"
                         id="privacy"
@@ -141,12 +141,21 @@
                         {{ "contact.privacy2" | translate }}
                     </p>
                 </label>
+                <div
+                    [style.visibility]="
+                        !privacy.valid && privacy.touched ? 'visible' : 'hidden'
+                    "
+                >
+                    <p style="color: red; margin-bottom: 7px">
+                        {{ "contact.error.privacy" | translate }}
+                    </p>
+                </div>
 
                 <input
                     type="submit"
                     [value]="'contact.send' | translate"
                     [disabled]="
-                        !checkbox.valid ||
+                        !privacy.valid ||
                         !message.valid ||
                         !email.valid ||
                         !name.valid

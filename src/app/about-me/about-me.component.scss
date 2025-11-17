@@ -27,7 +27,11 @@ section {
     p {
         padding-bottom: 25px;
         padding-top: 20px;
-    }
+    } 
+    
+    h1 {
+        white-space: nowrap;
+    } 
 }
 
 .info-container {
@@ -132,5 +136,19 @@ section {
 
     main {
     padding-top: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        padding-bottom: 0px;
+    }
+
+    .about-me {
+        padding: 0px;
+    }
+
+    .info img {
+        padding-right: 10px;
     }
 }

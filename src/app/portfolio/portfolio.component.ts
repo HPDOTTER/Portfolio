@@ -39,43 +39,7 @@ export class PortfolioComponent {
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
             githubLink: 'https://johannes-nordmann.de/El-Pollo-Loco',
             liveLink:
-                'https://johannes-nordmann.developerakademie.net/El-Pollo-Loco/index.html',
-        },
-        {
-            title: 'Pokédex',
-            descriptionKey: 'project.pokedex.description',
-            image: './assets/img/pokedex-example.png',
-            technologies: [
-                'JavaScript',
-                'REST API',
-                'HTML',
-                'CSS',
-                'Bootstrap',
-            ],
-            githubLink: 'https://github.com/HPDOTTER/Pokedex',
-            liveLink: 'https://johannes-nordmann.de/Pokedex/',
-        },
-        {
-            title: 'DA Bubble Chat',
-            descriptionKey: 'project.daBubble.description',
-            image: './assets/img/join-example.png',
-            technologies: [
-                'Angular',
-                'Firebase',
-                'TypeScript',
-                'RxJS',
-                'Material UI',
-            ],
-            githubLink: 'https://github.com/username/da-bubble',
-            liveLink: 'https://johannes-nordmann.de/',
-        },
-        {
-            title: 'Portfolio Website',
-            descriptionKey: 'project.portfolio.description',
-            image: './assets/img/portfolio-example.png',
-            technologies: ['Angular', 'SCSS', 'TypeScript'],
-            githubLink: 'https://github.com/HPDOTTER/Portfolio',
-            liveLink: 'https://johannes-nordmann.de',
+                'https://johannes-nordmann.de/El-Pollo-Loco/index.html',
         },
     ];
 

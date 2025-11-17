@@ -143,6 +143,8 @@ export class TranslationService {
                 'Please enter a valid email address format',
             'contact.error.message':
                 'Please enter a message (minimum 3 characters)',
+            'contact.error.privacy':
+                'Please accept the privacy policy to continue',
             'contact.success.title': 'Message Sent Successfully!',
             'contact.success.message':
                 'Thank you for your message! I will get back to you as soon as possible.',
@@ -337,6 +339,8 @@ export class TranslationService {
                 'Bitte geben Sie ein gültiges E-Mail-Format ein',
             'contact.error.message':
                 'Bitte geben Sie eine Nachricht ein (mindestens 3 Zeichen)',
+            'contact.error.privacy':
+                'Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren',
             'contact.success.title': 'Nachricht erfolgreich gesendet!',
             'contact.success.message':
                 'Vielen Dank für Ihre Nachricht! Ich werde mich so schnell wie möglich bei Ihnen melden.',
