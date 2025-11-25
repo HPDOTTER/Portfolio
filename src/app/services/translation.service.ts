@@ -150,6 +150,7 @@ export class TranslationService {
             'contact.error.title': 'Oops! Something went wrong',
             'contact.error.sendMessage':
                 'There was an error sending your message. Please try again or contact me directly.',
+            'checkbox.error.message': 'You must agree to the privacy policy to proceed.',
 
             // Footer
             'footer.imprint': 'Legal Notice',
@@ -344,6 +345,8 @@ export class TranslationService {
             'contact.error.title': 'Oops! Etwas ist schief gelaufen',
             'contact.error.sendMessage':
                 'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt.',
+            'checkbox.error.message':
+                'Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren.',
 
             // Footer
             'footer.imprint': 'Impressum',

@@ -56,11 +56,11 @@
                         [(ngModel)]="contactData.email"
                         [ngClass]="{'invalid': (!email.valid && email.touched) || (email.errors?.['pattern'] && email.touched), 'valid': email.valid && email.touched}"
                         #email="ngModel"
-                        type="email"
+                        type="text"
                         id="email"
                         name="email"
                         [placeholder]="'contact.email' | translate"
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                         required
                     />
                     <span
@@ -124,7 +124,7 @@
                         {{ "contact.error.message" | translate }}
                     </p>
                 </div>
-                <label class="checkbox-label" for="checkbox">
+                <label class="checkbox-label" for="privacy">
                     <input
                         #checkbox="ngModel"
                         [(ngModel)]="contactData.privacy"
@@ -133,15 +133,30 @@
                         name="privacy"
                         required
                     />
-                    <p>
-                        {{ "contact.privacy1" | translate }}
-                        <a class="link" routerLink="/privacy-policy">{{
-                            "contact.privacyLink" | translate
-                        }}</a>
-                        {{ "contact.privacy2" | translate }}
-                    </p>
+                    <div class="checkbox-label-div">
+                        <p>
+                            {{ "contact.privacy1" | translate }}
+                            <a class="link" routerLink="/privacy-policy">{{
+                                "contact.privacyLink" | translate
+                            }}</a>
+                            {{ "contact.privacy2" | translate }}
+                        </p>
+                        <div
+                            [style.visibility]="
+                                !checkbox.valid &&
+                                name.touched &&
+                                email.touched &&
+                                message.touched
+                                    ? 'visible'
+                                    : 'hidden'
+                            "
+                        >
+                            <p style="color: red; margin-bottom: 7px">
+                                {{ "checkbox.error.message" | translate }}
+                            </p>
+                        </div>
+                    </div>
                 </label>
-
                 <input
                     type="submit"
                     [value]="'contact.send' | translate"
