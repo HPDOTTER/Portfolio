@@ -195,7 +195,6 @@ main {
     }
 
     .hero {
-
         .scroll-down {
             display: none;
         }
@@ -216,7 +215,6 @@ main {
 }
 
 @media (max-width: 800px) {
-
     .email-link {
         display: none;
     }
@@ -247,6 +245,8 @@ main {
 
 @media (max-width: 550px) {
     .hero {
+        bottom: -5%;
+
         h1,
         h2 {
             font-size: 20px;
@@ -258,10 +258,26 @@ main {
             line-height: 28px;
         }
     }
+
+    main {
+        background-size: 180%;
+        background-position: 35% 5%;
+    }
 }
 
-@media (max-width: 400px) {
+@media (min-height: 680px) and (max-height: 1000px) {
     main {
-        background-position: 20% 10%;
+        background-size: 250%;
+        background-position: 37% 5%;
+    }
+
+    .hero {
+        bottom: -6%;
+    }
+}
+
+@media (min-width: 2500px) {
+    main {
+        background-image: url("../../assets/img/background-center.png");
     }
 }

@@ -37,7 +37,7 @@ export class PortfolioComponent {
             descriptionKey: 'project.polloLoco.description',
             image: './assets/img/pollo-loco-example.png',
             technologies: ['JavaScript', 'HTML5 Canvas', 'CSS', 'OOP'],
-            githubLink: 'https://johannes-nordmann.de/El-Pollo-Loco',
+            githubLink: 'https://github.com/HPDOTTER/El-Pollo-Loco',
             liveLink:
                 'https://johannes-nordmann.de/El-Pollo-Loco/index.html',
         },
