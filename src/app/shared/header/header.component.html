@@ -5,12 +5,12 @@
                 <img
                     class="logo-big"
                     src="./assets/img/logo-cut.png"
-                    alt="Logo"
+                    alt="Johannes Nordmann Logo"
                 />
                 <img
                     class="logo-small"
                     src="./assets/img/favicon.png"
-                    alt=""
+                    alt="Johannes Nordmann Logo"
                 />
             </a>
         </div>
@@ -24,14 +24,22 @@
             <app-language-switcher></app-language-switcher>
         </div>
         <div class="burger-menu" (click)="toggleMenu()">
-            <img src="./assets/icons/burgermenu.png" />
+            <img src="./assets/icons/burgermenu.png" alt="Open menu" />
         </div>
     </div>
 </header>
 <div class="mobile-overlay" id="mobile-overlay" (click)="toggleMenu()">
-    <div class="mobile-overlay-header" >
-        <img style="height: 40px;" src="./assets/img/favicon.png" />
-        <img style="height: 30px;" src="./assets/icons/close.png" />
+    <div class="mobile-overlay-header">
+        <img
+            style="height: 40px"
+            src="./assets/img/favicon.png"
+            alt="Johannes Nordmann Logo"
+        />
+        <img
+            style="height: 30px"
+            src="./assets/icons/close.png"
+            alt="Close menu"
+        />
     </div>
     <div class="mobile-header-links">
         <a href="#about-me" (click)="closeMenu()">{{
