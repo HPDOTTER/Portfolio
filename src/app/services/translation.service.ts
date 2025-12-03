@@ -254,7 +254,7 @@ export class TranslationService {
         de: {
             // Navigation
             'nav.about': 'Über mich',
-            'nav.skills': 'Meine Fähigkeiten',
+            'nav.skills': 'Fähigkeiten',
             'nav.portfolio': 'Portfolio',
             'nav.contact': 'Kontakt',
 
@@ -277,7 +277,7 @@ export class TranslationService {
                 'Es bereitet mir große Freude, Prozesse zu analysieren und Wege zu finden, sie effizienter und einfacher zu gestalten. Dabei kombiniere ich analytisches Denken mit Kreativität, um für jedes Problem eine passende und elegante Lösung zu entwickeln. Herausforderungen sehe ich als Chance, Neues zu lernen und meine Fähigkeiten weiterzuentwickeln. Durch Ausdauer und Zusammenarbeit mit ihrem Team, sehe ich uns als aufgehender Stern in der Tech-Branche.',
 
             // Skills Section
-            'skills.title': 'Meine Fähigkeiten',
+            'skills.title': 'Fähigkeiten',
             'skills.looking': 'Suchen Sie nach',
             'skills.another': 'einer anderen Fähigkeit?',
             'skills.getInTouch': 'Kontakt aufnehmen',

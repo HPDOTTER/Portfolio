@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../pipes/translate.pipe';
 import { TranslationService } from '../services/translation.service';
@@ -77,6 +77,10 @@ export class ContactFormComponent {
     /** Determines popup type and styling ('success' or 'error') */
     popupType: 'success' | 'error' = 'success';
 
+    /** Email validation regex pattern */
+    private emailPattern =
+        /^[a-zA-Z0-9][a-zA-Z0-9._%-]*[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
+
     /**
      * HTTP POST configuration for form submission.
      *
@@ -103,6 +107,33 @@ export class ContactFormComponent {
     constructor(private translationService: TranslationService) {}
 
     /**
+     * Validates email format using regex pattern.
+     *
+     * @param email - Email string to validate
+     * @returns true if email is valid, false otherwise
+     */
+    isValidEmail(email: string): boolean {
+        return this.emailPattern.test(email);
+    }
+
+    /**
+     * Custom email validator directive for template-driven forms.
+     *
+     * @param emailModel - NgModel reference from template
+     * @returns validation errors object or null if valid
+     */
+    validateEmail(emailModel: NgModel): { [key: string]: any } | null {
+        const email = emailModel.value;
+        if (!email) {
+            return null; // Let required validator handle empty values
+        }
+        if (!this.isValidEmail(email)) {
+            return { pattern: true };
+        }
+        return null;
+    }
+
+    /**
      * Handles form submission and sends data to backend email service.
      *
      * Validates form data and sends HTTP POST request to backend.
@@ -126,6 +157,11 @@ export class ContactFormComponent {
      * ```
      */
     onSubmit(ngForm: NgForm) {
+        // Additional email validation check
+        if (!this.isValidEmail(this.contactData.email)) {
+            return;
+        }
+
         if (ngForm.submitted && ngForm.form.valid) {
             this.http
                 .post(this.post.endPoint, this.post.body(this.contactData))

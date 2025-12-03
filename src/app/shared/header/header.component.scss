@@ -79,6 +79,7 @@ img {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding-right: 5px;
 
     img {
         height: 30px;
@@ -123,6 +124,7 @@ img {
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    z-index: 1001;
 
     &.active {
         visibility: visible;
@@ -159,6 +161,10 @@ img {
     }
 }
 
+.mobile-header-logo {
+    height: 40px;
+}
+
 @media (max-width: 1060px) {
     .logo-big {
         height: 35px;
@@ -183,5 +189,31 @@ img {
     }
     .header-content {
         width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        height: 70px;
+    }
+
+    .logo-small {
+        height: 30px;
+    }
+
+    .burger-menu {
+        height: 30px;
+
+        img {
+            height: 25px;
+        }
+    }
+
+    .mobile-overlay-header {
+        height: 70px;
+    }
+
+    .mobile-header-logo {
+        height: 30px;
     }
 }

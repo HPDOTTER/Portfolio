@@ -54,36 +54,53 @@
                 <div>
                     <input
                         [(ngModel)]="contactData.email"
-                        [ngClass]="{'invalid': (!email.valid && email.touched) || (email.errors?.['pattern'] && email.touched), 'valid': email.valid && email.touched}"
+                        [ngClass]="{
+                            invalid: email.invalid && email.touched,
+                            valid:
+                                email.valid &&
+                                email.touched &&
+                                isValidEmail(contactData.email)
+                        }"
                         #email="ngModel"
                         type="text"
                         id="email"
                         name="email"
                         [placeholder]="'contact.email' | translate"
-                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%-]*[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]\.[a-zA-Z]{2,}$"
+                        (blur)="email.control.updateValueAndValidity()"
                         required
                     />
                     <span
                         class="icon"
-                        *ngIf="email.invalid && email.touched"
+                        *ngIf="
+                            (email.invalid && email.touched) ||
+                            (email.touched && !isValidEmail(contactData.email))
+                        "
                         style="
                             content: url(./assets/icons/red-exclamation-mark.png);
                         "
                     ></span>
                     <span
                         class="icon"
-                        *ngIf="email.valid && email.touched"
+                        *ngIf="
+                            email.valid &&
+                            email.touched &&
+                            isValidEmail(contactData.email)
+                        "
                         style="content: url(./assets/icons/green-checkmark.png)"
                     ></span>
                 </div>
                 <div
                     [style.visibility]="
-                        !email.valid && email.touched ? 'visible' : 'hidden'
+                        (email.invalid && email.touched) ||
+                        (email.touched && !isValidEmail(contactData.email))
+                            ? 'visible'
+                            : 'hidden'
                     "
                 >
                     <p style="color: red; margin-bottom: 7px">
                         {{ email.errors?.['required'] ? ('contact.error.email' | translate) : 
-                        email.errors?.['pattern'] ? ('contact.error.emailPattern' | translate) : 'spaceholder' }}
+                        (!isValidEmail(contactData.email) || email.errors?.['pattern']) ? ('contact.error.emailPattern' | translate) : 'spaceholder' }}
                     </p>
                 </div>
                 <label for="message"></label>
@@ -164,7 +181,8 @@
                         !checkbox.valid ||
                         !message.valid ||
                         !email.valid ||
-                        !name.valid
+                        !name.valid ||
+                        !isValidEmail(contactData.email)
                     "
                 />
             </form>

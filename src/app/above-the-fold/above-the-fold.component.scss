@@ -5,7 +5,7 @@ main {
     align-items: center;
     justify-content: center;
     max-height: 100svh;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100%;
     background-image: url("../../assets/img/background-2.png");
     background-size: 100%;
@@ -58,11 +58,11 @@ main {
     text-align: center;
     line-height: 40px;
 
-    h2 {
+    h4 {
         display: inline-block;
         transform: rotate(-90deg) translateY(50%);
         transform-origin: bottom;
-        font-size: 35px;
+        font-size: 33px;
         font-weight: 500;
     }
 }
@@ -178,7 +178,7 @@ main {
 
     .hero {
         h1,
-        h2 {
+        h4 {
             font-size: 35px;
         }
 
@@ -248,7 +248,7 @@ main {
         bottom: -5%;
 
         h1,
-        h2 {
+        h4 {
             font-size: 20px;
             line-height: 28px;
         }
@@ -262,6 +262,7 @@ main {
     main {
         background-size: 180%;
         background-position: 35% 5%;
+        height: calc(100vh - 70px);
     }
 }
 
