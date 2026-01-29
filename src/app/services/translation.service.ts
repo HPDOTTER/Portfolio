@@ -77,7 +77,7 @@ export class TranslationService {
             'about.description':
                 'My passion for programming arose from my curiosity about the rapid technological development in IT. I have been spending a lot of time on computers since my youth. As part of my career reorientation, software development was therefore like a "godsend" for me. Since then, I have been continuing my education in programming at the Developer Academy alongside my job and am currently implementing my first own projects.',
             'about.location':
-                'I live in Raisting in the Alpine foothills of Bavaria. I prefer to work from home, but I am willing to work on-site for training purposes.',
+                'I live in Raisting in the Alpine foothills of Bavaria. I prefer to work from home, if possible',
             'about.inspiration':
                 'I am particularly fascinated by the automation of processes, a topic that is becoming increasingly important in our time. Since I started programming, I have been working privately on an automated ventilation control system for the old building I live in.',
             'about.approach':
@@ -270,7 +270,7 @@ export class TranslationService {
             'about.description':
                 'Meine Leidenschaft für das Programmieren entstand aus meiner Neugier für die rasante technische Entwicklung in der IT. Schon seit meiner Jugend verbringe ich viel Zeit am Computer. Im Rahmen meiner beruflichen Neuorientierung war die Softwareentwicklung daher wie ein „gefundenes Fressen“ für mich. Seitdem bilde ich mich berufsbegleitend bei der Developer Akademie im Programmieren weiter und setze aktuell meine ersten eigenen Projekte um.',
             'about.location':
-                'Ich wohne in Raisting im Alpenvorland in Bayern. Vorzugsweise arbeite ich von Zuhause aus, jedoch bin ich bereit für die Einarbeitung vor Ort zu arbeiten.',
+                'Ich wohne in Raisting im Alpenvorland in Bayern. Vorzugsweise arbeite ich von Zuhause aus, falls möglich.',
             'about.inspiration':
                 'Mich fasziniert besonders die Automatisierung von Abläufen, ein Thema, das in unserer heutigen Zeit immer wichtiger wird. Seit ich mit dem Programmieren begonnen habe, arbeite ich privat an einer automatisierten Lüftungssteuerung für den Altbau, in dem ich wohne.',
             'about.approach':

@@ -83,6 +83,13 @@ section {
     max-width: $content-width;
 }
 
+#about-me,
+#skills,
+#portfolio,
+#contact {
+    scroll-margin-top: 100px;
+}
+
 .center {
     display: flex;
     align-items: center;
@@ -114,6 +121,7 @@ h2 {
     font-size: 45px;
     font-weight: 700;
 }
+
 
 @media (max-width: 1550px) {
     h1 {
