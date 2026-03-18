@@ -83,7 +83,7 @@ export class ContactFormComponent {
      * - requires a domain with a TLD of at least 2 letters
      */
     private emailPattern =
-        /^(?!.*\.\.)(?!\.)(?!.*\.$)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        /^(?!.*\.\.)(?!\.)(?!.*\.$)[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
 
     /**
      * HTTP POST configuration for form submission.
