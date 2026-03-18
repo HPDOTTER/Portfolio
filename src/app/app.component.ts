@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -36,4 +36,42 @@ import { FooterComponent } from './shared/footer/footer.component';
 export class AppComponent {
     /** Application title displayed in browser tab */
     title = 'Portfolio';
+
+    /** After view init set CSS variables for header/footer heights (browser only) */
+    ngAfterViewInit(): void {
+        if (typeof window === 'undefined' || typeof document === 'undefined')
+            return;
+        // initial measurement after browser paints
+        requestAnimationFrame(() => this.updateHeaderFooterHeightVars());
+    }
+
+    @HostListener('window:resize')
+    onResize(): void {
+        if (typeof window === 'undefined' || typeof document === 'undefined')
+            return;
+        this.updateHeaderFooterHeightVars();
+    }
+
+    private updateHeaderFooterHeightVars(): void {
+        try {
+            const header = document.querySelector('app-header');
+            const footer = document.querySelector('app-footer');
+            const root = document.documentElement;
+
+            const headerHeight = header
+                ? Math.ceil((header as HTMLElement).offsetHeight)
+                : 0;
+            const footerHeight = footer
+                ? Math.ceil((footer as HTMLElement).offsetHeight)
+                : 0;
+
+            if (root && typeof root.style !== 'undefined') {
+                root.style.setProperty('--header-height', `${headerHeight}px`);
+                root.style.setProperty('--footer-height', `${footerHeight}px`);
+            }
+        } catch (e) {
+            // swallow in case of unexpected DOM issues
+            // keep silent to avoid logging during SSR or tests
+        }
+    }
 }

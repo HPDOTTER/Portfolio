@@ -1,7 +1,18 @@
 @import "../../styles.scss";
 
+/*
+  Make the main content fill the viewport minus header and footer.
+  Header/footer heights are read from CSS custom properties so they can
+  be set dynamically (JS) or in a global stylesheet. Fallback values
+  are provided.
+  Example (set in :root or via JS):
+    :root { --header-height: 80px; --footer-height: 60px; }
+*/
 main {
     width: 100%;
+    min-height: calc(
+        100vh - var(--header-height, 80px) - var(--footer-height, 60px)
+    );
 }
 
 section {

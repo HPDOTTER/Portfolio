@@ -49,6 +49,10 @@ $content-width: 1920px;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 button,
 a,
 img {
@@ -108,7 +112,7 @@ section {
         padding: 10px 25px;
         background-color: $green;
         border-radius: 10px;
-        font-size: 20px;
+        font-size: 1.25rem; /* 20px */
         white-space: nowrap;
 
         &:hover {
@@ -117,11 +121,11 @@ section {
     }
 }
 
+/* Responsive heading sizing */
 h2 {
-    font-size: 45px;
+    font-size: clamp(1.5rem, 2.5vw, 2.8rem); /* ~24px - 45px range */
     font-weight: 700;
 }
-
 
 @media (max-width: 1550px) {
     h1 {

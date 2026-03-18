@@ -6,10 +6,6 @@
     <section class="form-section">
         <div class="contact-instruction">
             <h3>{{ "contact.problem" | translate }}</h3>
-            <p>
-                {{ "contact.description" | translate }}
-            </p>
-            <p>{{ "contact.need" | translate }}</p>
         </div>
         <div class="form-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -17,9 +13,10 @@
                 <div>
                     <input
                         [(ngModel)]="contactData.name"
+                        (blur)="trimModel(name, 'name')"
                         [ngClass]="{
                             invalid: !name.valid && name.touched,
-                            valid: name.valid && name.touched
+                            valid: name.valid && name.touched,
                         }"
                         #name="ngModel"
                         type="text"
@@ -50,24 +47,22 @@
                         {{ "contact.error.name" | translate }}
                     </p>
                 </div>
+
                 <label for="email"></label>
                 <div>
                     <input
                         [(ngModel)]="contactData.email"
+                        (blur)="trimModel(email, 'email')"
                         [ngClass]="{
                             invalid: email.invalid && email.touched,
-                            valid:
-                                email.valid &&
-                                email.touched &&
-                                isValidEmail(contactData.email)
+                            valid: email.valid && email.touched,
                         }"
                         #email="ngModel"
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
                         [placeholder]="'contact.email' | translate"
-                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%-]*[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]\.[a-zA-Z]{2,}$"
-                        (blur)="email.control.updateValueAndValidity()"
+                        pattern="^(?!.*\.\.)(?!\.)(?!.*\.$)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
                         required
                     />
                     <span
@@ -99,17 +94,24 @@
                     "
                 >
                     <p style="color: red; margin-bottom: 7px">
-                        {{ email.errors?.['required'] ? ('contact.error.email' | translate) : 
-                        (!isValidEmail(contactData.email) || email.errors?.['pattern']) ? ('contact.error.emailPattern' | translate) : 'spaceholder' }}
+                        {{
+                            email.errors?.["required"]
+                                ? ("contact.error.email" | translate)
+                                : !isValidEmail(contactData.email) ||
+                                    email.errors?.["pattern"]
+                                  ? ("contact.error.emailPattern" | translate)
+                                  : "spaceholder"
+                        }}
                     </p>
                 </div>
                 <label for="message"></label>
                 <div>
                     <textarea
                         [(ngModel)]="contactData.message"
+                        (blur)="trimModel(message, 'message')"
                         [ngClass]="{
                             invalid: !message.valid && message.touched,
-                            valid: message.valid && message.touched
+                            valid: message.valid && message.touched,
                         }"
                         #message="ngModel"
                         id="message"

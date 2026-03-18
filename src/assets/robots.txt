@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Sitemap: https://johannes-nordmann.de/sitemap.xml
+
+# Add rules for specific bots or disallowed paths if necessary

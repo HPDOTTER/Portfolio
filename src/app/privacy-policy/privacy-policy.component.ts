@@ -13,8 +13,9 @@ export class PrivacyPolicyComponent implements OnInit {
     constructor(private router: Router) {}
 
     ngOnInit() {
-        // Scroll to top when component initializes
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
     }
 
     goBack() {

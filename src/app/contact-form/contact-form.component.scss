@@ -188,7 +188,7 @@ form {
         position: relative;
 
         p {
-            font-size: 12px;
+            font-size: 1rem; /* 16px minimum */
         }
     }
 }
@@ -407,6 +407,6 @@ form {
     }
 
     .popup-body p {
-        font-size: 14px;
+        font-size: 1rem;
     }
 }

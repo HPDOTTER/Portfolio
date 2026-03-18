@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -47,6 +47,40 @@
             property="twitter:image"
             content="https://johannes-nordmann.de/assets/img/favicon.png"
         />
+
+        <!-- Canonical -->
+        <link rel="canonical" href="https://johannes-nordmann.de/" />
+
+        <!-- Hreflang (example) -->
+        <link
+            rel="alternate"
+            href="https://johannes-nordmann.de/"
+            hreflang="de"
+        />
+        <link
+            rel="alternate"
+            href="https://johannes-nordmann.de/en/"
+            hreflang="en"
+        />
+
+        <!-- Allow indexing by default; adjust robots.txt for crawler rules -->
+        <meta name="robots" content="index, follow" />
+
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Johannes Nordmann",
+                "url": "https://johannes-nordmann.de/",
+                "sameAs": [
+                    "https://github.com/your-profile",
+                    "https://www.linkedin.com/in/your-profile"
+                ],
+                "jobTitle": "Frontend Developer",
+                "description": "Frontend Developer specializing in Angular and TypeScript."
+            }
+        </script>
 
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

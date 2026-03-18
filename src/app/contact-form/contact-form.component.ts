@@ -77,9 +77,13 @@ export class ContactFormComponent {
     /** Determines popup type and styling ('success' or 'error') */
     popupType: 'success' | 'error' = 'success';
 
-    /** Email validation regex pattern */
+    /** Email validation regex pattern
+     * - disallows consecutive dots
+     * - disallows leading or trailing dot on the whole address
+     * - requires a domain with a TLD of at least 2 letters
+     */
     private emailPattern =
-        /^[a-zA-Z0-9][a-zA-Z0-9._%-]*[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
+        /^(?!.*\.\.)(?!\.)(?!.*\.$)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
     /**
      * HTTP POST configuration for form submission.
@@ -174,6 +178,31 @@ export class ContactFormComponent {
                         this.showErrorPopup();
                     },
                 });
+        }
+    }
+
+    /**
+     * Trim whitespace from a template-driven NgModel value on blur.
+     * Also updates the underlying control and keeps the component model in sync.
+     */
+    trimModel(model: NgModel, field?: 'name' | 'email' | 'message') {
+        if (!model) return;
+        const raw = model.value || '';
+        const trimmed = raw.trim();
+        if (trimmed !== raw) {
+            // Update the control value and re-run validation
+            try {
+                model.control.setValue(trimmed);
+            } catch (e) {
+                // fallback: update the bound model property
+                if (field) {
+                    (this.contactData as any)[field] = trimmed;
+                }
+            }
+            if (field) {
+                (this.contactData as any)[field] = trimmed;
+            }
+            model.control.updateValueAndValidity();
         }
     }
 
