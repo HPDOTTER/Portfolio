@@ -60,7 +60,7 @@ export class AppComponent {
         if (isPlatformBrowser(this.platformId)) {
             AOS.init({
                 duration: 750,
-                easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+                easing: 'ease-out-cubic',
                 once: true,
                 mirror: false,
                 offset: 100,
