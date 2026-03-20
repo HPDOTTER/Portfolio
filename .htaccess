@@ -9,16 +9,27 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.johannes-nordmann\.de$ [NC]
 RewriteRule ^(.*)$ https://johannes-nordmann.de/$1 [L,R=301]
 
-# Angular routing - redirect all requests to index.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^.*$ /index.html [L]
+# Serve existing files/directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Do not rewrite requests for static assets; return 404 if missing
+RewriteCond %{REQUEST_URI} \.(?:css|js|mjs|map|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf)$ [NC]
+RewriteRule ^ - [L]
+
+# Angular routing fallback for client-side routes only
+RewriteRule ^ /index.html [L]
 
 # Prevent directory browsing
 Options -Indexes
 
 # Set default charset
 AddDefaultCharset UTF-8
+
+# Ensure correct MIME types for strict browser checks
+AddType text/css .css
+AddType application/javascript .js .mjs
 
 # Enable GZIP compression for better performance
 <IfModule mod_deflate.c>
