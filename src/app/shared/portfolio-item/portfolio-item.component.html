@@ -2,6 +2,10 @@
     class="portfolio-item"
     [class.reversed]="isReversed"
     [class]="'item-' + index"
+    [attr.data-aos]="isReversed ? 'fade-left' : 'fade-right'"
+    [attr.data-aos-delay]="(index + 1) * 80"
+    [attr.data-aos-duration]="760"
+    [attr.data-aos-offset]="120"
 >
     <div class="image-section">
         <img [src]="image" [alt]="title" class="project-image" />

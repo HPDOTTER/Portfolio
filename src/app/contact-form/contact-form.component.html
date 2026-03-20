@@ -1,13 +1,26 @@
 <main class="center" id="contact">
-    <section class="header-section">
+    <section class="header-section" data-aos="fade-up" data-aos-duration="720">
         <div class="vector-span"><span class="purple-vector"></span></div>
         <h2>{{ "contact.title" | translate }}</h2>
     </section>
     <section class="form-section">
-        <div class="contact-instruction">
+        <div
+            class="contact-instruction"
+            data-aos="fade-right"
+            data-aos-duration="760"
+        >
             <h3>{{ "contact.problem" | translate }}</h3>
+            <p>
+                {{ "contact.description" | translate }}
+            </p>
+            <p>{{ "contact.need" | translate }}</p>
         </div>
-        <div class="form-container">
+        <div
+            class="form-container"
+            data-aos="fade-left"
+            data-aos-delay="170"
+            data-aos-duration="820"
+        >
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <label for="name"></label>
                 <div>
@@ -190,7 +203,12 @@
             </form>
         </div>
     </section>
-    <section class="button-container">
+    <section
+        class="button-container"
+        data-aos="fade-up"
+        data-aos-delay="220"
+        data-aos-duration="620"
+    >
         <span class="background-shade"></span>
         <a class="button" href="#top"
             ><img src="./assets/icons/go-up-button.png"

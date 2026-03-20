@@ -1,8 +1,18 @@
-import { Component, AfterViewInit, HostListener } from '@angular/core';
+import {
+    Component,
+    AfterViewInit,
+    HostListener,
+    Inject,
+    PLATFORM_ID,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
+import AOS from 'aos';
 
 /**
  * Root component of the Portfolio application.
@@ -37,10 +47,37 @@ export class AppComponent {
     /** Application title displayed in browser tab */
     title = 'Portfolio';
 
+    constructor(
+        @Inject(PLATFORM_ID) private platformId: object,
+        private router: Router,
+    ) {}
+
     /** After view init set CSS variables for header/footer heights (browser only) */
     ngAfterViewInit(): void {
         if (typeof window === 'undefined' || typeof document === 'undefined')
             return;
+
+        if (isPlatformBrowser(this.platformId)) {
+            AOS.init({
+                duration: 750,
+                easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+                once: true,
+                mirror: false,
+                offset: 100,
+                anchorPlacement: 'top-bottom',
+                disable: () =>
+                    window.matchMedia('(prefers-reduced-motion: reduce)')
+                        .matches,
+            });
+
+            this.router.events
+                .pipe(filter((event) => event instanceof NavigationEnd))
+                .subscribe(() => {
+                    // Refresh after route content is rendered.
+                    setTimeout(() => AOS.refreshHard(), 0);
+                });
+        }
+
         // initial measurement after browser paints
         requestAnimationFrame(() => this.updateHeaderFooterHeightVars());
     }
@@ -50,6 +87,10 @@ export class AppComponent {
         if (typeof window === 'undefined' || typeof document === 'undefined')
             return;
         this.updateHeaderFooterHeightVars();
+
+        if (isPlatformBrowser(this.platformId)) {
+            AOS.refresh();
+        }
     }
 
     private updateHeaderFooterHeightVars(): void {
